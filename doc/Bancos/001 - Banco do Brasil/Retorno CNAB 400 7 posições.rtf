@@ -1,0 +1,666 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033\deftab708{\fonttbl{\f0\fmodern\fcharset0 Courier New;}{\f1\froman\fcharset0 Times New Roman;}}
+{\stylesheet{ Normal;}{\s1 heading 1;}{\s2 heading 2;}{\s3 heading 3;}}
+{\*\generator Msftedit 5.41.15.1503;}\viewkind4\uc1\pard\lang1046\f0\fs18\par
+Nota..                                                                    \par
+        a/ Caracteristicas do Arquivo Retorno..                            \par
+           I  - Nome do Arquivo /DATA SET NAME/ = CBR643.,                 \par
+           II - Tamanho do registro= 400 bytes.,                           \par
+           III- Organizacao = sequencial.,                                 \par
+           IV - Formato dos registros =                                    \par
+                - FB /Fixos Blocados/                                      \par
+                - Formato dos campos /9/ - numerico                        \par
+                                     /X/ - alfanumerico                    \par
+        b/ eh composto de quatro tipos de registros..                      \par
+           I   -HEADER - registro de abertura do arquivo.                  \par
+                 Contem as informacoes da empresa convenente e             \par
+                 agencia centralizadora do convenio.,                      \par
+           II  - DETALHE - contem as informacoes detalhadas do             \par
+                 titulo, cedente, sacado e instrucoes para o               \par
+                 processamento                                             \par
+           III - DETALHE-AUXILIAR - contem as informacoes detalhadas       \par
+                 sobre o partilhamento do titulo e a destinacao dos        \par
+                 creditos.,                                                \par
+           IV  - TRAILLER - eh o registro de encerramento do arquivo.      \par
+        c/ os campos do arquivo retorno que possuirem DATA no formato      \par
+           /DDMMAA/, conterao..                                            \par
+           I  - para ano igual a 2001 /DDMMAA/ - /AA/ igual a 01.,         \par
+           II - para ano igual a 2002 /DDMMAA/ - /AA/ igual a 02.,         \par
+                 e assim sucessivamente ateh o ano 2069                    \par
+                                                                           \par
+                                                                           \par
+\par
+\par
+\pard\qc CBR643\par
+\pard 01. Descricao dos Campos\par
+\pard\qc HEADER\par
+\pard ...........................................................................\par
+N.  POSICAO   PICTURE   USAGE    CONTEUDO\par
+...........................................................................\par
+01  001 a 001 9/001/    Numeric  0 /zero/\par
+02  002 a 002 9/001/    Numeric  2\par
+03  003 a 009 X/007/    Alfa     RETORNO\par
+04  010 a 011 9/002/    Numeric  01\par
+05  012 a 019 X/008/    Alfa     COBRANCA\par
+06  020 a 026 X/007/    Alfa     Brancos\par
+07  027 a 030 9/004/    Numeric  Prefixo da Agencia\par
+08  031 a 031 X/001/    Alfa     DV-prefixo da agencia\par
+09  032 a 039 9/008/    Numeric  Codigo do Cedente\par
+10  040 a 040 X/001/    Alfa     DV-codigo do cedente\par
+11  041 a 046 9/006/    Numeric  Zeros\par
+12  047 a 076 X/030/    Alfa     Nome da Empresa\par
+13  077 a 094 X/018/    Alfa     001BANCO DO BRASIL\par
+14  095 a 100 9/006/    Numeric  Data da Gravacao /DDMMAA/\par
+15  101 a 107 9/007/    Numeric  Sequencial do Retorno\par
+16  108 a 149 X/42/      Alfa    Brancos\par
+17  150 a 156 9/007/    Numeric  N\'famero do Conv\'eanio com 7 posi\'e7\'f5es\par
+18  157 a 394 X/238/    Alfa     Brancos \par
+19  395 a 400 9/006/   Numeric   No. do sequencial do registro\par
+\~\par
+\~\par
+\~\par
+\~\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\pard\qc DETALHE \par
+\pard ............................................................................\par
+N.  POSICOES  PICTURE   USAGE    CONTEUDO\par
+............................................................................\par
+01  001 a 001 9/001/    Numeric  7\par
+02  002 a 003 9/002/    Numeric  Tipo de inscricao da empresa/preenchido com\par
+                                 zeros no arquivo retorno/\par
+03  004 a 017 9/014/    Numeric  Nr de inscricao da empresa/preenchido com zeros\par
+                                 no arquivo retorno/\par
+04  018 a 021 9/004/    Numeric  Prefixo da agencia\par
+05  022 a 022 X/001/    Alfa     DV-prefixo da agencia\par
+06  023 a 030 9/008/    Numeric  Codigo do cedente\par
+07  031 a 031 X/001/    Alfa     DV-codigo do cedente\par
+08  032 a 038 9/007/    Numeric  Numero do convenio\par
+09  039 a 063 X/025/    Alfa     Nr. controle do participante\par
+10  064 a 080 9/017/    Numeric  Nosso numero\par
+11  081 a 081 9/001/    Numeric  Tipo de Cobranca.\par
+                                 1 - Simples\par
+                                 2 - Vinculada\par
+                                 4 - Descontada\par
+                                 7 - Direta\par
+                                 8 - Vendor\par
+12  082 a 082 9/001/    Numeric  Tipo de Cobranca Anterior. Especifico para \par
+                                 comando 72- alteracao de tipo de cobranca de\par
+                                 titulos das carteiras 11 e 17:\par
+                                 0 - caso nao haja alteracao de tipo de cobran\'e7a.\par
+                                 1 - Simples\par
+                                 2 - Vinculada\par
+                                 4 - Descontada\par
+                                 7 - Direta\par
+                                 8 - Vendor\par
+13  083 a 086 9/004/    Numeric  Dias para calculo..\par
+                                 Carteiras- 11,12,15,16,17,18 e 31, vide \par
+                                 observa\'e7\'f5es\par
+                                 Carteiras- 51.. igual ao numero de dias sobre os \par
+                                 quais foram calculados o Desconto e o IOF\par
+14  087 a 088 9/002/    Numeric  Natureza do recebimento/Motivo da \par
+                                 entrada/baixa/recusa\par
+                                 Indicativos..\par
+                                 NATUREZA DO RECEBIMENTO /comando\par
+                                 05,06,07,08 ou 15 /pos. 109/110/\par
+                                 01-liquidacao normal\par
+                                 02-por conta\par
+                                 03-liquidacao por saldo\par
+                                 04-liquidacao com cheque a compensar\par
+                                 05-liquidacao de titulo sem registro/cart.17, \par
+                                    tipo 4/\par
+                                 07-liquidacao na apresentacao\par
+                                 09-liquidacao em cartorio\par
+                                 ENTRADA/comdo 02- pos. 109/110/..\par
+                                 00-Por meio magnetico\par
+                                 11-Por via convencional\par
+                                 16-Por alteracao do codigo do cedente\par
+                                 17-Por alteracao da variacao\par
+                                 18-por alteracao da carteira\par
+                                 BAIXA/comdo 09/10/20-pos 109/110/..\par
+                                 00-Solicitada pelo cliente\par
+                                 15-Protestado\par
+                                 18-Por alteracao da carteira\par
+                                 19-Debito automatico\par
+                                 31-Liquidado anteriormente\par
+                                 32-Habilitado em processo\par
+                                 33-Incobravel por nosso intermedio\par
+                                 34-Transferido para creditos em liquida\'e7\'e3o\par
+                                 46-Por alteracao do codigo do cedente\par
+                                 47-Por alteracao da variacao\par
+                                 51-Acerto\par
+                                 90-Baixa automatica\par
+                                 RECUSA/comdo 03-pos 109/110/..\par
+                                 01-Identificacao invalida\par
+                                 02-Variacao da carteira invalida\par
+                                 03-Valor dos juros por um dia inv\'e1lido\par
+                                 04-Valor do desconto invalido\par
+                                 05-Especie de titulo invalida para \par
+                                    carteira/varia\'e7\'e3o\par
+                                 06-Especie de valor variavel inv\'e1lido\par
+                                 07-Prefixo da agencia usuaria inv\'e1lido\par
+                                 08-Valor do titulo/apolice invalido\par
+                                 09-Data de vencimento invalida\par
+                                 10-Fora do prazo /Soh admissivel na carteira 11/\par
+                                 11-Inexistencia de margem para desconto\par
+                                 12-O Banco nao tem agencia na pra\'e7a do sacado\par
+                                 13-Razoes cadastrais\par
+                                 14-Sacado interligado com o sacador/S\'f3 \par
+                                    admiss\'edvel em cobranca simples- cart. 11 e \par
+                                    17/\par
+                                 15-Titulo sacado contra orgao do Poder P\'fablico\par
+                                    /Soh admissivel na cart.11 e sem ordem de \par
+                                    protesto/\par
+                                 16-Titulo preenchido de forma irregular\par
+                                 17-Titulo rasurado\par
+                                 18-Ender.do sacado n\'e3o localizado ou incompleto\par
+                                 19-Codigo do cedente invalido\par
+                                 20-Nome/endereco do cliente n\'e3o informado/ECT/\par
+                                 21-Carteira invalida\par
+                                 22-Quantidade de valor variavel inv\'e1lida\par
+                                 23-Faixa nosso-numero excedida\par
+                                 24-Valor do abatimento invalido\par
+                                 25-Novo numero do tit. dado pelo cedente \par
+                                    inv\'e1lido \par
+                                 26-Valor do IOF de seguro invalido\par
+                                 27-Nome do sacado/cedente invalido ou n\'e3o \par
+                                    informado\par
+                                 28-Data do novo vencimento invalida\par
+                                 29-Endereco nao informado\par
+                                 30-Registro de titulo jah liquidado/cart.17-tipo \par
+                                    4/\par
+                                 31-Numero do bordero invalido\par
+                                 32-Nome da pessoa autorizada inv\'e1lido\par
+                                 33-Nosso numero jah existente\par
+                                 34-Numero da prestacao do contrato inv\'e1lido\par
+                                 35-percentual de desconto invalido\par
+                                 36-Dias para fichamento de protesto inv\'e1lido\par
+                                 37-Data de emissao do titulo inv\'e1lida\par
+                                 38-Data do vencimento anterior aa data da \par
+                                    emissao do titulo\par
+                                 39-Comando de alteracao indevido para a carteira\par
+                                 40-Tipo de moeda invalido\par
+                                 41-Abatimento nao permitido\par
+                                 42-CEP/UF invalido/nao compativeis /ECT/\par
+                                 43-Codigo de unidade variavel incompat\'edvel com a\par
+                                    data de emiss\'e3o do t\'edtulo\par
+                                 44-Dados para debito ao sacado inv\'e1lidos\par
+                                 45-Carteira/variacao encerrada\par
+                                 46-Convenio encerrado\par
+                                 47-Titulo tem valor diverso do informado\par
+                                 48-Motivo de baixa invalido para a carteira\par
+                                 49-Abatimento a cancelar nao consta do t\'edtulo\par
+                                 50-Comando incompativel com a carteira\par
+                                 51-Codigo do convenente invalido\par
+                                 52-Abatimento igual ou maior que o valor do \par
+                                    t\'edtulo\par
+                                 53-Titulo jah se encontra na situa\'e7\'e3o pretendida\par
+                                 54-Titulo fora do prazo admitido para a conta 1\par
+                                 55-Novo vencimento fora dos limites da carteira\par
+                                 56-Titulo nao pertence ao convenente\par
+                                 57-Variacao incompativel com a carteira\par
+                                 58-Impossivel a transferencia para a cart. \par
+                                    indicada\par
+                                 59-Titulo vencido em transfer\'eancia para a\par
+                                    cart.51\par
+                                 60-Titulo com prazo superior a 179 dias em \par
+                                    transferencia para carteira 51\par
+                                 61-Titulo jah foi fichado para protesto\par
+                                 62-Alteracao da situacao de debito inv\'e1lida para \par
+                                    o c\'f3digo de responsabilidade\par
+                                 63-DV do nosso numero invalido\par
+                                 64-Titulo nao passivel de d\'e9bito/baixa-situa\'e7\'e3o\par
+                                    anormal\par
+                                 65-Titulo com ordem de n\'e3o protestar-n\'e3o pode\par
+                                    ser encaminhado a cart\'f3rio\par
+                                 67-Titulo/carne rejeitado\par
+                                 69-Valor/Percentual de Juros Inv\'e1lido\par
+                                 70-T\'edtulo j\'e1 se encontra isento de juros\par
+                                 71-C\'f3digo de Juros Inv\'e1lido\par
+                                 72-Pedido de Protesto Recusado - Cidade do \par
+                                    Sacado N\'e3o Protesta T\'edtulos.\par
+                                    do sacado.\par
+                                 80-Nosso numero invalido\par
+                                 81-Data para concessao do desconto inv\'e1lida.\par
+                                    Gerada nos seguintes casos..\par
+                                    a/ erro na data do desconto.,\par
+                                    b/ data do desconto anterior aa data de \par
+                                       emiss\'e3o\par
+                                 82-CEP do sacado invalido\par
+                                 83-Carteira/variacao nao localizada no cedente\par
+                                 84-Titulo nao localizado na exist\'eancia\par
+                                 99-Outros motivos\par
+                                 ALTERACAO DE TIPO DE COBRANCA/\par
+                                 Comando 72/pos. 109/110..\par
+                                 00-Transferencia de titulo de Cobran\'e7a Simples \par
+                                    para Descontada\par
+                                 52-Reembolso de titulo Vendor ou Descontado\par
+15  089 a 091 X/003/  Alfa       Prefixo do titulo\par
+16  092 a 094 9/003/  Numeric    Variacao da carteira\par
+17  095 a 095 9/001/  Numeric    Conta caucao\par
+                                 para carteira 31..\par
+                                 0 - comandos 28, 96, 97 e 98\par
+                                 1 - Conta "1"\par
+                                 2 - Conta "2"\par
+                                 4 - Conta "2" /Titulos a vencer a mais de 180 \par
+                                     dias/\par
+                                 para tipo de cobranca 8-Vendor, vide observa\'e7\'f5es\par
+18 096 a 100 9/003/v99Numeric    Taxa de desconto\par
+                                 para tipo de cobranca 8-Vendor, vide observa\'e7\'f5es\par
+19  101 a 105 9/004/v9Numeric    Taxa de IOF\par
+                                 para tipo de cobranca 8-Vendor, vide observa\'e7\'f5es\par
+20  106 a 106 X/001/  Alfa       Branco\par
+21  107 a 108 9/002/  Numeric    Carteira\par
+22  109 a 110 9/002/  Numeric    Comando\par
+                                 02-Confirmacao de Entrada de T\'edtulo\par
+                                 03-Comando recusado /ver posicao 087/088/\par
+                                 05-Liquidado sem registro /carteira 17-tipo4 /\par
+                                 06-Liquidacao Normal\par
+                                 07-Liquidacao por Conta\par
+                                 08-Liquidacao por Saldo\par
+                                 09-Baixa de Titulo\par
+                                 10-Baixa Solicitada\par
+                                 11-Titulos em Ser /constara somente do arquivo \par
+                                    de exist\'eancia de cobranca, fornecido mediante \par
+                                    solicita~]ao do cliente/\par
+\par
+\par
+\par
+                                 12-Abatimento Concedido\par
+                                 13-Abatimento Cancelado\par
+                                 14-Alteracao de Vencimento do t\'edtulo\par
+                                 15-Liquidacao em Cartorio\par
+                                 16-Confirma\'e7\'e3o de altyera\'e7\'e3o de juros de ora\par
+                                 19-Confirmacao de recebimento de instru\'e7\'f5es para \par
+                                    protesto\par
+                                 20-Debito em Conta\par
+                                 21-Alteracao do Nome do Sacado\par
+                                 22-Alteracao do Endereco do Sacado\par
+                                 23-Indicacao de encaminhamento a cart\'f3rio\par
+                                 24-Sustar Protesto\par
+                                 25-Dispensar Juros de mora\par
+                                 28-Manutencao de titulo vencido\par
+                                 31-Conceder desconto\par
+                                 32-Nao conceder desconto\par
+                                 33-Retificar desconto\par
+                                 34-Alterar data para desconto\par
+                                 35 - Cobrar Multa\par
+                                 36 - Dispensar Multa\par
+                                 37 - Dispensar Indexador\par
+                                 38 - Dispensar prazo limite para recebimento\par
+                                 39 - Alterar prazo limite para recebimento\par
+                                 72-Alteracao de tipo de cobranca/espec\'edfico para \par
+                                    t\'edtulos das carteiras 11 e 17/.\par
+                                 96-Despesas de Protesto\par
+                                 97-Despesas de Sustacao de Protesto\par
+                                 98-Debito de Custas Antecipadas\par
+23  111 a 116 9/006/    Numeric  Data da entrada/liquidacao /DDMMAA/\par
+24  117 a 126 X/010/    Alfa     Nr titulo dado pelo cedente\par
+25  127 a 146 X/020/    Brancos\par
+26  147 a 152 9/006/    Numeric  Data do vencimento /DDMMAA/\par
+27  153 a 165 9/011/v99 Numeric  Valor do titulo\par
+28 166 a 168 9/003/    Numeric   Codigo do Banco recebedor\par
+29  169 a 172 9/004/    Numeric  Prefixo da Agencia recebedora. Vide observa\'e7\'f5es.\par
+30  173 a 173 X/001/    Alfa     DV-prefixo agencia recebedora ou DV-prefixo \par
+                                 servi\'e7o de compensacao /COMPE-SP/\par
+31  174 a 175 9/002/    Numeric  Especie do titulo..\par
+                                 00-informado nos registros com comando /97-\par
+                                    DESPESAS DE SUSTACAO DE PROTESTO/nas posicoes \par
+                                    109/110 desde que o titulo nao conste mais da \par
+                                    exist\'eancia.\par
+                                 01-duplicata mercantil\par
+                                 02-nota promissoria\par
+                                 03-nota de seguro\par
+                                 05-recibo\par
+                                 08-letra de cambio\par
+                                 09-warrant\par
+                                 10-cheque\par
+                                 12-duplicata de servico\par
+                                 13-nota de debito\par
+                                 15-apolice de seguro\par
+                                 25-divida ativa da Uniao\par
+                                 26-divida ativa de Estado\par
+                                 27-divida ativa de Municipio\par
+32  176 a 181 9/006/    Numeric  Data do credito /DDMMAA/..\par
+                                 serah informada nos registros com comando \par
+                                /pos.109/110/ igual a 06,07,08,15., nos demais \par
+                                 conter\'e1 brancos\par
+33  182 a 188 9/005/v99 Numeric  Valor da tarifa\par
+34  189 a 201 9/011/v99 Numeric  Outras despesas\par
+35  202 a 214 9/011/v99 Numeric  Juros do desconto\par
+36  215 a 227 9/011/v99 Numeric  IOF do desconto\par
+37  228 a 240 9/011/v99 Numeric  Valor do abatimento\par
+38  241 a 253 9/011/v99 Numeric  Desconto concedido\par
+39  254 a 266 9/011/v99 Numeric  Valor recebido\par
+40  267 a 279 9/011/v99 Numeric  Juros de mora\par
+41  280 a 292 9/011/v99 Numeric  Outros recebimentos\par
+42  293 a 305 9/011/v99 Numeric  Abatimento nao aproveitado pelo sacado\par
+43  306 a 318 9/011/v99 Numeric  Valor do lancamento\par
+44  319 a 319 9/001/    Numeric  Indicativo de debito/credito\par
+                                 0-Sem lancamento\par
+                                 1-Debito\par
+                                 2-Credito\par
+45  320 a 320 9/001/    Numeric  Indicador de valor\par
+                                 1-Ajuste a debito\par
+                                 2-Ajuste a credito\par
+                                   - para tipo de cobranca 8-Vendor, vide \par
+                                     observa\'e7\'f5es\par
+46  321 a 332 9/010/v99 Numeric  Valor do ajuste\par
+\pard\fi-2567\li2567                                  para tipo de cobran\'e7a 8-VENDOR ser\'e1 preenchido \par
+                                 com o valor da equaliza\'e7\'e3o de taxas quando do \par
+                                 reembolso ou transfer\'eancia do t\'edtulo para \par
+                                 Cobran\'e7a Simples. \par
+\pard 47  333 a 333 X/001/    Alfa     Brancos\par
+                                 - Para cobranca compartilhada ser\'e1 apresentado o \par
+                                   indicativo de compartilhamento..\par
+                                   2-Convenio Compartilhador\par
+                                   3-Convenio Compartilhado\par
+48  334 a 342 9/009/    Numeric  Brancos\par
+                                 - Na cobranca compartilhada.. Ser\'e1 informado o \par
+                                   valor original do t\'edtulo pago pelo sacado.\par
+49  343 a 349 9/007/    Numeric  No. do Conv\'eanio Compartilhado - 1\par
+                                 - Na cobranca compartilhada..\par
+                                    Posicao 333 = 2.. Numero do  primeiro \par
+                                    conv.compartilhado,\par
+                                    Posicao 333 = 3.. Numero do conv. \par
+                                    compartilhador.\par
+50  350 a 358 9/009/    Numeric  Valor  compartilhado\par
+                                 - Na cobranca compartilhada..\par
+                                   Posicao 333 = 2.. Valor repassado para o \par
+                                   primeiro conv. compartilhado.\par
+                                   Posicao 333 = 3.. Valor  recebido no \par
+                                   conv.compartilhador.\par
+51  359 a 365 9/007/    Numeric  No. do Conv\'eanio Compartilhado - 2\par
+                                 - Na cobranca compartilhada..\par
+                                   Posicao 333 = 2.. Numero  do  segundo \par
+                                   conv.compartilhado,\par
+                                   Posicao 333 = 3.. Preenchido  com zeros.\par
+52  366 a 374 9/009/    Numeric  Valor compartilhado\par
+                                 - Na cobranca compartilhada..\par
+                                   Posicao 333 = 2.. Valor repassado para o \par
+                                   segundo conv. compartilhado.\par
+                                   Posicao 333 = 3.. Preenchido  com zeros.\par
+53  375 a 381 9/007/    Numeric  No. Do Conv\'eanio Compartilhado - 3\par
+                                 - Na cobranca compartilhada..\par
+                                   Posicao 333 = 2.. Numero do  terceiro \par
+                                   conv.compartilhado,\par
+                                   Posicao 333 = 3.. Zeros\par
+54  382 a 390 9/009/    Numeric  Valor Compartilhado\par
+                                 - Na cobranca compartilhada..\par
+                                   Posicao 333 = 2.. Valor repassado para o \par
+                                   terceiro conv. compartilhado.\par
+                                   Posicao 333 = 3.. Zeros.\par
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656 55  391 a 392 X/002/    Display  Brancos                                \par
+56  393 a 394 9/002/    Display  Canal de Pagamento do T\'edtulo         \par
+                                 utilizado pelo sacado:               \par
+                                 01 - Terminal de Auto-Atendimento    \par
+                                 02 - Internet                        \par
+                                 03 - Central de Atendimento (URA)    \par
+                                 04 - Gerenciador Financeiro          \par
+                                 05 - Central de Atendimento          \par
+                                 06 - Outro Canal de Auto-atendimento \par
+                                 07 - Correspondente Banc\'e1rio         \par
+                                 08 - Guich\'ea de Caixa                 \par
+                                 09 - Arquivo-Eletr\'f4nico              \par
+                                 10 - Compensa\'e7\'e3o                     \par
+                                 11 - Outro Canal Eletr\'f4nico          \par
+57  395 a 400 9/006/    Display  Sequencial do registro               \par
+\pard OBSERVACOES                                                               \par
+                                                                          \par
+....................................................................      \par
+N.    POSICOES   OBSERVACOES                                              \par
+....................................................................      \par
+     039 a 063  Para carteiras 16 e 18.. Serah preenchido com brancos.\par
+\f1\fs24\par
+\par
+\pard\keepn\s3\b\f0 Nota: Detalhe somente utilizado para a Cobranca Partilhada \par
+\pard      /Carteira 17 - tipo 6/                                           \par
+\b0\f1\par
+\pard\keepn\s1\b\f0 DETALHE-AUXILIAR /RETORNO/  COBRAN\'c7A PARTILHADA                        \par
+\pard\b0\fs18 ....................................................................   \par
+N.  POSICOES  PICTURE   USAGE    CONTEUDO                              \par
+....................................................................   \par
+01  001 a 001 9/001/    Display  2 /dois/                              \par
+02  002 a 018 9/017/    Display  Nosso numero                          \par
+03  019 a 021 9/003/    Display  Banco para credito                    \par
+04  022 a 024 9/003/    Display  Camara de compensacao                 \par
+05  025 a 028 9/004/    Display  Pref. agencia para credito            \par
+06  029 a 029 X/001/    Display  DV-prefixo ag. credito                \par
+07  030 a 040 9/011/    Display  Conta para credito                  \par
+08  041 a 041 X/001/    Display  DV-conta para credito               \par
+09  042 a 071 X/030/    Display  Nome do favorecido                  \par
+10  072 a 084 9/011/v99 Display  Valor informado para partilha       \par
+11  085 a 097 X/011/v99 Display  Valor efetivamente partilhado       \par
+12  098 a 100 9/003/    Display  Banco para credito                  \par
+13  101 a 103 9/003/    Display  Camara de compensacao               \par
+14  104 a 107 9/004/    Display  Pref. agencia para credito          \par
+15  108 a 108 X/001/    Display  DV-prefixo ag. credito              \par
+16  109 a 119 9/011/    Display  Conta para credito                  \par
+17  120 a 120 X/001/    Display  DV-conta para credito               \par
+18  121 a 150 X/030/    Display  Nome do favorecido                  \par
+19  151 a 163 9/011/v99 Display  Valor informado para partilha       \par
+20  164 a 176 9/011/v99 Display  Valor efetivamente partilhado       \par
+21  177 a 179 9/003/    Display  Banco para credito                  \par
+22  180 a 182 9/003/    Display  Camara de compensacao               \par
+23  183 a 186 9/004/    Display  Pref. agencia para credito    \par
+24  187 a 187 X/001/    Display  DV-prefixo ag. credito        \par
+25  188 a 198 9/011/    Display  Conta para credito            \par
+26  199 a 199 X/001/    Display  DV-conta para credito         \par
+27  200 a 229 X/030/    Display  Nome do favorecido            \par
+28  230 a 242 9/011/v99 Display  Valor informado para partilha \par
+29  243 a 255 9/011/v99 Display  Valor efetivamente partilhado \par
+30  256 a 258 9/003/    Display  Banco para credito            \par
+31  259 a 261 9/003/    Display  Camara de compensacao         \par
+32  262 a 265 9/004/    Display  Pref. agencia para credito    \par
+33  266 a 266 X/001/    Display  DV-prefixo ag. credito        \par
+34  267 a 277 9/011/    Display  Conta para credito            \par
+35  278 a 278 X/001/    Display  DV-conta para credito         \par
+36  279 a 308 X/030/    Display  Nome do favorecido            \par
+37  309 a 321 9/011/v99 Display  Valor informado para partilha \par
+38  322 a 334 9/011/v99 Display  Valor efetivamente partilhado \par
+39  335 a 335 9/001/    Display  Tipo Documento Favorecido 1        \par
+                                 2 - CPF      4 - CNPJ              \par
+40  336 a 349 9/014/    Display  Numero Documento Favorecido 1      \par
+41  350 a 350 9/001/    Display  Tipo Documento Favorecido 2        \par
+                                 2 - CPF      4 - CNPJ              \par
+42  351 a 364 9/014/    Display  Numero Documento Favorecido 2      \par
+43  365 a 365 9/001/    Display  Tipo Documento Favorecido 3        \par
+                                 2 - CPF      4 - CNPJ              \par
+44  366 a 379 9/014/    Display  Numero Documento Favorecido 3      \par
+45  380 a 380 9/001/    Display  Tipo Documento Favorecido 4        \par
+                                 2 - CPF      4 - CNPJ              \par
+46  381 a 394 9/014/    Display  Numero Documento Favorecido 4      \par
+47  395 a 400 9/006/    Display  Sequencial \par
+\par
+Obs..a/ O registro Tipo 2 /detalhe-auxiliar/ somente constarah do         \par
+         arquivo retorno quando houver comandos de liquidacao de           \par
+         titulos em COBRANCA PARTILHADA                                    \par
+      b/ o campo, Valor informado para Partilha, contem a mesma            \par
+         informacao fornecida no arquivo-remessa,                          \par
+      c/ o campo,valor efetivamente partilhado contem o valor que foi      \par
+         lancado para a respectiva conta. Sobre este valor,incidirah,      \par
+         proporcionalmente, qualquer acrescimo, desconto ou                \par
+         abatimento concedido na liquidacao do titulo.                     \par
+                                                                           \par
+                                                                           \par
+\f1\fs24\par
+\b\f0 Nota.. Detalhe somente utilizado para BB Vendor\par
+DETALHE-AUXILIAR /RETORNO/ DE TIPO 3\par
+\b0\fs18\par
+....................................................................\par
+N.  POSICOES  PICTURE   USAGE    CONTEUDO\par
+....................................................................\par
+01  001 a 001 9/001/    Display  3 /tres/\par
+02  002 a 012 9/011/    Display  Nosso numero\par
+03  013 a 013 X/001/    Display  DV - nosso numero\par
+04  014 a 022 9/009/    Display  Numero da operacao BBVendor no aplicativo CIOPE.\par
+05  023 a 030 9/008/    Display  Data da operacao BBVendor no formato DDMMAAAA.\par
+06  031 a 035 9/002/V999Display  Taxa de juros do vendedor, com dois\par
+                                 inteiros e tres decimais.\par
+07  036 a 040 9/002/V999Display  Taxa de juros do comprador, com\par
+                                 dois inteiros e tres decimais.\par
+08  041 a 055 9/013/V99 Display  Valor do titulo no vencimento\par
+09  056 a 070 9/013/V99 Display  Valor original da venda\par
+10  071 a 085 9/013/V99 Display  Valor dos encargos do comprador\par
+11  086 a 100 9/013/V99 Display  Valor do IOF financiado\par
+12  101 a 115 9/013/V99 Display  Valor acumulado de abatimentos comandados\par
+13  116 a 116 9/001/    Display  Indicativo de epoca da equalizacao\par
+                                 1 - equalizacao no inicio\par
+                                 0 - equalizacao no final\par
+14  117 a 117 9/001/    Display  Indicativo de natureza da equalizacao\par
+                                 1 - equalizacao a debito\par
+                                 0 - equalizacao a credito\par
+15  118 a 132 9/013/V99 Display  Valor da equalizacao\par
+16  133 a 147 9/013/V99 Display  Valor de juros de prorrogacao\par
+17  148 a 162 9/013/V99 Display  Valor de IOF de prorrogacao\par
+18  163 a 177 9/013/V99 Display  Valor de IOF sobre periodo de atraso.\par
+19  178 a 214 X/037/    Display  Nome do comprador\par
+20  215 a 215 9/001/    Display  Codigo do tipo de documento do comprador\par
+                                 1 - CPF\par
+                                 2 - CNPJ\par
+21  216 a 229 9/014/    Display  Numero do documento do comprador\par
+22  230 a 231 9/002/    Display  Utilizado para convers\'e3o para CNAB240\par
+                                 03 - Entrada Rejeitada\par
+                                 26 - Instru\'e7\'e3o Rejeitada.\par
+23  232 a 248 X/017/    Num\'e9rico Nosso N\'famero com 17 posi\'e7\'f5es.\par
+24  249 a 263 9/013/V99 Display  Novo Valor do T\'edtulo - No caso de\par
+                                 baixa/liquida\'e7\'e3o antecipada.\par
+25  264 a 278 9/013/V99 Display  Valor da Equaliza\'e7\'e3o Estornada -\par
+                                 Valor da equaliza\'e7\'e3o creditada ou\par
+                                 debitada no in\'edcio (equaliza\'e7\'e3o\par
+                                 positiva ou negativa no in\'edcio,\par
+                                 respectivamente), estornada em fun\'e7\'e3o\par
+                                 da baixa/liquida\'e7\'e3o antecipada.\par
+26  279 a 293 9/013/V99 Display  Valor da Nova Equaliza\'e7\'e3o\par
+                                 (Creditada ou debitada ao cliente),\par
+                                 em fun\'e7\'e3o da baixa/liquida\'e7\'e3o\par
+                                 antecipada.\par
+27  294 a 308 9/013/V99 Display  Valor da Diferen\'e7a entre as\par
+                                 Equaliza\'e7\'f5es - diferen\'e7a entre os\par
+                                 Valores apurados nos campos 25 e 26.\par
+28  309 a 309 9/001/    Display  Indicativo de D\'e9bito/Cr\'e9dito\par
+                                 Estorno a d\'e9bito ou a cr\'e9dito\par
+                                 (Corresponde ao valor indicado no\par
+                                 campo 25)\par
+                                 1 - D\'e9bito\par
+                                 2 - Cr\'e9dito.\par
+29  310 a 310 9/001/    Display  Indicativo de Natureza da Equaliza\'e7\'e3o\par
+                                 (Corresponde ao valor indicado no\par
+                                 campo 26)\par
+                                 1-Equaliza\'e7\'e3o a D\'e9bito\par
+                                 0-Equaliza\'e7\'e3o a Cr\'e9dito.\par
+30  311 a 311 9/001/    Display  Indicativo de D\'e9bito/Cr\'e9dito\par
+                                 (Corresponde ao valor indicado no\par
+                                  campo 27)\par
+                                 1-D\'e9bito\par
+                                 2-Cr\'e9dito.\par
+31  312 a 326 9/013/V99 Display  Valor do IOF n\'e3o Financiado -\par
+                                 Cobrado no Registro do T\'edtulo.\par
+32  327 a 341 9/013/V99 Display  Valor da Comiss\'e3o de Perman\'eancia,\par
+                                 Cobrada no T\'edtulo.\par
+33  342 a 400 X/059/    Display  Vago.\par
+\f1\fs24\par
+\par
+\par
+\b\f0 DETALHE-AUXILIAR /RETORNO/ DE TIPO 5 (BLOQUETO POR E-MAIL)\par
+\b0\fs18 ....................................................................\par
+N.  POSICOES  PICTURE   USAGE    CONTEUDO\par
+....................................................................\par
+01  001 a 001 X/001/    Display  5 /cinco/\par
+02  002 a 003 9/002/    Display  1 /um/ - Bloqueto por email\par
+03  004 a 005 9/002/    Display  C\'f3digo de Ocorr\'eancia\par
+04  006 a 142 X/135/    Display  135 /cento e trinta e cinco/\par
+                                 Primeira Posi\'e7\'e3o\par
+                                 Obs: endere\'e7os de email informados\par
+                                 no arquivo remessa.\par
+05  143 a 394 X/252/    Display  Brancos\par
+06  395 a 400 X/006/    Display  Sequencial Registro\par
+....................................................................\par
+                                                                      \par
+                                                                      \par
+\par
+\par
+\par
+CODIGOS DE OCORRENCIA (CAMPO 03)                                          \par
+....................................................................      \par
+CBR643  Descri\'e7\'e3o                                                         \par
+....................................................................      \par
+70      Documento de identifica\'e7\'e3o do sacado inv\'e1lido - Bloqueto ser\'e1     \par
+        impresso                                                          \par
+71      Endere\'e7o de email do sacado inv\'e1lido - Bloqueto ser\'e1 impresso     \par
+72      Sacado optante por cobran\'e7a eletr\'f4nica - Bloqueto ser\'e1 eletr\'f4     \par
+        nico                                                              \par
+73      Tipo de conv\'eanio n\'e3o permite envio de email - Bloqueto ser\'e1       \par
+        impresso                                                          \par
+74      Modalidade de cobran\'e7a inv\'e1lida para envio de email - Bloqueto    \par
+        ser\'e1 impresso                                                     \par
+75      Cedente n\'e3o autorizado a enviar email - Bloqueto ser\'e1 impresso    \par
+                                                                          \par
+\par
+\par
+\f1\fs24\par
+\par
+\par
+\par
+\par
+\par
+\pard\keepn\s2\lang1033\b\f0\fs36 TRAILER\par
+\pard\b0\fs18 ....................................................................\par
+N.  POSICOES  PICTURE   USAGE    CONTEUDO\par
+....................................................................\par
+01  001 a 001 9/001/    Display  9\par
+02  002 a 002 9/001/    Display  2\par
+03  003 a 004 9/002/    Display  01\par
+04  005 a 007 9/003/    Display  001\par
+05  008 a 017 X/010/    Display  Brancos\par
+....................................................................\par
+COBRANCA SIMPLES\par
+....................................................................\par
+06  018 a 025 9/008/    Display  Quantidade de titulos\par
+07  026 a 039 9/012/v99 Display  Valor total\par
+08  040 a 047 9/008/    Display  Numero do aviso\par
+09  048 a 057 X/010/    Display  Brancos\par
+....................................................................\par
+COBRANCA VINCULADA\par
+....................................................................\par
+10  058 a 065 9/008/    Display  Quantidade de titulos\par
+11  066 a 079 9/012/v99 Display  Valor total\par
+12  080 a 087 9/008/    Display  Numero do aviso\par
+13  088 a 097 X/010/    Display  Brancos\par
+....................................................................\par
+COBRANCA CAUCIONADA\par
+....................................................................\par
+14  098 a 105 9/008/    Display  Quantidade de titulos\par
+15  106 a 119 9/012/v99 Display  Valor total\par
+16  120 a 127 9/008/    Display  Numero do aviso\par
+\lang1046 17  128 a 137 X/010/    Display  Brancos\par
+....................................................................\par
+COBRANCA DESCONTADA\par
+....................................................................\par
+18  138 a 145 9/008/    Display  Quantidade de titulos\par
+19  146 a 159 9/012/v99 Display  Valor total\par
+20  160 a 167 9/008/    Display  Numero do aviso\par
+21  168 a 394 X/227/    Display  Brancos\par
+22  395 a 400 9/006/    Display  Sequencial do registro\par
+....................................................................\par
+BBVENDOR\par
+....................................................................\par
+01  218 a 225 9/008/    Display  Quantidade de titulos\par
+02  226 a 239 9/012/V99 Display  Valor total de titulos\par
+03  240 a 247 9/008/    Display  Nr. aviso BB Vendor\par
+04  248 a 400 X/153/    Display  Brancos - uso do Banco do Brasil\par
+....................................................................\par
+\~\par
+\f1\fs24\par
+\par
+\par
+}
+ 

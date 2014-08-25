@@ -1,0 +1,417 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1046{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f6\fmodern\fcharset0\fprq1{\*\panose 00000000000000000000}Courier;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;
+\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet{\nowidctlpar\widctlpar\adjustright \fs20\lang1046\cgrid \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}{\s15\nowidctlpar\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\lang1046\cgrid \sbasedon0 \snext15 footer;}{\*\cs16 
+\additive \sbasedon10 page number;}}{\*\listtable{\list\listtemplateid-1\listsimple{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat0\levelspace0\levelindent0{\leveltext\'01*;}{\levelnumbers;}}{\listname ;}\listid-2}}{\*\listoverridetable
+{\listoverride\listid-2\listoverridecount1{\lfolevel\listoverrideformat{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelold\levelspace0\levelindent283{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\b0\i0\f3\fs20\ulnone\fbias0 \fi-283\li1723 }}
+\ls1}}{\info{\author Almir Almeida Silva}{\operator Almir Almeida Silva}{\creatim\yr1997\mo1\dy20\hr17\min5}{\revtim\yr1997\mo9\dy19\hr9\min40}{\printim\yr1997\mo1\dy21\hr8\min39}{\version24}{\edmins164}{\nofpages7}{\nofwords1631}{\nofchars9302}
+{\*\company Ger. de Automa\'e7\'e3o de Produtos}{\nofcharsws0}{\vern73}}\paperw11907\paperh16840\margl1134\margr1134\margt1134\margb1134 
+\widowctrl\ftnbj\aenddoc\pgnstart0\hyphhotz425\lytprtmet\hyphcaps0\formshade\viewkind1\viewscale100\pgbrdrhead\pgbrdrfoot \fet0\sectd \psz9\pgnrestart\pgnstarts0\linex0\headery680\footery680\colsx709\endnhere\titlepg\sectdefaultcl {\footer \pard\plain 
+\s15\nowidctlpar\widctlpar\tqc\tx4320\tqr\tx8640\pvpara\phmrg\posxr\posy0\adjustright \fs20\lang1046\cgrid {\field{\*\fldinst {\cs16 PAGE  }}{\fldrslt {\cs16\lang1024 5}}}{\cs16 
+\par }\pard \s15\ri360\nowidctlpar\widctlpar\tqc\tx4320\tqr\tx8640\adjustright {
+\par }}{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}
+{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \nowidctlpar\widctlpar\adjustright \fs20\lang1046\cgrid {\f6 
+\par }{\lang1024 {\shp{\*\shpinst\shpleft593\shptop65\shpright8946\shpbottom14178\shpfhdr0\shpbxcolumn\shpbypara\shpwr3\shpwrk0\shpfblwtxt0\shpz0\shplid1026{\sp{\sn shapeType}{\sv 1}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8192\dprect\dpx593\dpy65\dpxsize8353\dpysize14113
+\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinew15\dplinecor0\dplinecog0\dplinecob0}}}}{\f6 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\f1\fs48 TROCA DE ARQUIVOS
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\f1\fs48 EXTRATO 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\f1\fs48 
+\par 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\f1\fs48 DE 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\f1\fs48 
+\par 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\f1\fs48 CONTAS CORRENTES
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\f1\fs48 
+\par 
+\par }{\f6 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par                                                      
+\par                                                                
+\par }{\lang1024 {\shp{\*\shpinst\shpleft881\shptop209\shpright2322\shpbottom498\shpfhdr0\shpbxcolumn\shpbypara\shpwr3\shpwrk0\shpfblwtxt0\shpz1\shplid1027{\sp{\sn shapeType}{\sv 1}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn lTxid}{\sv 65536}}{\sp{\sn dxTextLeft}{\sv 12700}}{\sp{\sn dyTextTop}{\sv 12700}}{\sp{\sn dxTextRight}{\sv 12700}}{\sp{\sn dyTextBottom}{\sv 12700}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fShadow}{\sv 0}}{\shptxt \pard\plain 
+\nowidctlpar\widctlpar\adjustright \fs20\lang1046\cgrid {\b\f1 BANCO REAL}{
+\par }}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8193\dptxbx{\dptxbxtext\pard\plain \nowidctlpar\widctlpar\adjustright \fs20\lang1046\cgrid {\b\f1 BANCO REAL}{
+\par }}\dpx881\dpy209\dpxsize1441\dpysize289\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr255\dpfillbgcg255\dpfillbgcb255\dpfillpat0\dplinehollow}}}}{\f6 
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab }{\b\f1\fs18 V. 1.0.0  19/09/97}{\f6 
+\par 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\f6 \page INTRODUCAO   
+\par }{\f6 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6 \tab O BANCO REAL ESTA OFERECENDO A EMISSAO DE SEUS EXTRATOS VIA TELEPROCESSAMENTO/MEIO  MAGNETICO SENDO EMITIDOS EM:
+\par 
+\par             -  FITA MAGNETICA;
+\par             -  CARTUCHO;
+\par             -  DISKETE;
+\par             -  LINHA TELEFONICA - MICRO/MAINFRAME;
+\par             -  LINHA TELEFONICA - MAINFRAME/MAINFRAME;
+\par             -  RENPAC;
+\par             -  E.D.I..
+\par 
+\par \tab TENDO EM VISTA OFERECER A NOSSOS CLIENTES MAIS ESSE SERVICO, SUGERIMOS QUE ADOTEM AS DIRETRIZES DO CNAB TRAZENDO BENEFICIOS TANTO PARA EMPRESAS QUANTO PARA O BANCO REAL.
+\par 
+\par \tab PARA TANTO AS DESCRICOES DOS PROCEDIMENTOS E AS CARACTERISTICAS DOS ARQUIVOS E REGISTROS ENCONTRAM-SE ANEXOS.
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\f6 \page COMPOSICAO DO ARQUVIO    
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6             REGISTRO '0' - HEADER DE ARQUIVO
+\par             REGISTRO '1' - TRANSACOES
+\par             REGISTRO '9' - TRAILER DE ARQUIVO
+\par 
+\par             OS REGISTROS '1' SE SUBDIVIDEM EM TRES TIPOS.  IDENTIFICADOS PELO DIFERENCIADOR NA POSICAO 42. ASSIM TEMOS:
+\par 
+\par             POSICAO 42 = 0   SALDO INICIAL DO EXTRATO (1.0)
+\par             POSICAO 42 = 1   LANCAMENTO               (1.1)
+\par             POSICAO 42 = 2   SALDO FINAL DO EXTRATO   (1.2)
+\par 
+\par             OS REGISTROS '0' (HEADER) E '9' (TRAILER) SAO UNICOS POR ARQUIVO.
+\par 
+\par             OS REGISTROS '1.0' (SALDO INICIAL) E '1.2' (SALDO FINAL) SAO UNICOS EM CADA CONTA. INDEPENDENTE DO PERIODO PARA O QUAL O ARQUIVO FOI GRAVADO.
+\par 
+\par             OS REGISTROS '1.1' (LANCAMENTOS) PODERAO APARECER DE 0 A N VEZES POR CONTA.
+\par             A CHAVE GERAL DO ARQUIVO QUE PERMITE A UMA EMPRESA AGRUPAR FITAS DE VARIOS  BANCOS  PARA  PROCESSAMENTO, APARECE EM TODOS OS REGISTROS NAS POSICOES 190 A 200. E' COMPOSTA DE:
+\par 
+\par             *  CODIGO DO SERVICO;
+\par             *  CODIGO DO BANCO;
+\par             *  NUMERO DE SEQUENCIA.
+\par 
+\par {\pntext\pard\plain\f3\fs20\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-283\li1723\nowidctlpar\widctlpar{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnb0\pni0\pnf3\pnfs20\pnstart1\pnindent283\pnhang{\pntxtb \'b7}}\ls1\adjustright {\f6 
+NUMERO DE SEQUENCIA E GERADO APOS A CLASSIFICACAO DO ARQUIVO EM ORDEM  ASCENDENTE  DOS  SEGUINTES DADOS:
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6 
+\par             *  CODIGO DO REGISTRO                  POS   01       TAM   01
+\par             *  CODIGO DA AGENCIA                   POS   18       TAM   04
+\par             *  CODIGO DA CONTA                     POS   22       TAM   20
+\par             *  TIPO DE REGISTRO                    POS   42       TAM   01
+\par             *  DATA DOS LANCAMENTOS (AAMMDD)       POS   81       TAM   07
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\f6 \page REMESSAS E RETORNOS     
+\par 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6       1 - GERACAO E DEVOLUCAO DE FITAS, CARTUCHO E DISQUETE.
+\par }\pard \li720\nowidctlpar\widctlpar\adjustright {\f6     O BANCO REAL GRAVARA ARQUIVOS NO MEIO MAGNETICO, ESPECIFICADO, 
+\par     DE SUA PROPRIEDADE.
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6           A EMPRESA DEVERA LHE DEVOLVER APOS PROCESSAMENTO.
+\par 
+\par       2 - ETIQUETA DE IDENTIFICACAO.
+\par }\pard \li720\nowidctlpar\widctlpar\adjustright {\f6     DEVEM SER UTILIZADAS ETIQUETAS AUTO-ADESIVAS CONFORME O PADRAO CNAB.
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6 
+\par       3 - PROTOCOLO DE REMESSA OU DE DEVOLUCAO.
+\par           DEVE SER UTILIZADO O MODELO PADRONIZADO PELO CNAB.
+\par 
+\par       4 - REMESSA.
+\par }\pard \li1200\nowidctlpar\widctlpar\adjustright {\f6 EXTRATO SERA ENVIADO, EM MEIO MAGNETICO A AGENCIA DO BANCO REAL 
+\par ESCOLHIDA DE COMUM ACORDO COM A EMPRESA.
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\f6 LAY-OUT DOS REGISTROS     
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6 
+\par 
+\par 
+\par \tab \tab }{\b\f6 REGISTRO HEADER DE ARQUIVO}{\f6    
+\par 
+\par   
+\par }{\b\f6 CAMPO                                     POSICOES   FORMATO  CONTEUDO
+\par                                           DE   ATE
+\par }{\f6 IDENTIFICACAO DO TIPO DE REGISTRO ....... 001  001   X(001)   '0'
+\par ***   RESERVADO  ***** .................. 002  009   X(008)   BRANCOS
+\par IDENTIFICACAO DO TIPO DE SERVICO ........ 010  011   X(002)   '04'
+\par DESCRICAO DO TIPO DE SERVICO ............ 012  026   X(015)   'EXTRATO C/C'
+\par CODIGO DA EMPRESA PARA O BANCO ...........027  046   X(020)   NOME DO GRUPO
+\par ***   RESERVADO  ***** ...................047  076   X(030)   BRANCOS
+\par CODIGO DO BANCO NA CAMARA DE COMPENSACAO .077  079   9(003)   275
+\par NOME DO BANCO ............................080  094   X(015)   'BANCO REAL'
+\par DATA DA GERACAO ..........................095  100   9(006)   FORMATO DDMMAA
+\par ***   RESERVADO  ***** ...................101  189   X(089)   BRANCOS
+\par CHAVE GERAL ..............................190  200   X(011)
+\par IDENTIFICACAO DO TIPO DE SERVICO .........190  191   X(002)   '04'
+\par NUMERO DO BANCO NA CAMARA DE COMPENSACAO .192  194   9(003)   275
+\par NUMERO SEQUENCIAL DO REGISTRO NO ARQUIVO .195  200   9(006)   DE 000001 A 999999
+\par 
+\par 
+\par  
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\f6 \page LAY-OUT DOS REGISTROS     
+\par 
+\par 
+\par 
+\par }\pard \fi720\nowidctlpar\widctlpar\adjustright {\b\f6 REGISTRO DE TRANSACAO  -  SALDO INICIAL   
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6 
+\par 
+\par }{\b\f6 CAMPO                                       POSICOES  FORMATO CONTEUDO
+\par                                             DE   ATE
+\par }{\f6 IDENTIFICACAO DO TIPO DE REGISTRO ..........001  001  X(001)  '1'
+\par CODIGO DE INSCRICAO DA EMPRESA .............002  003  X(002)  '01' - CPF
+\par                                                               '02' - CGC
+\par                                                               '03' - PIS
+\par                                                               '98' - OUTROS
+\par                                                               '99' - NAO TEM
+\par NUMERO DE INSCRICAO DA EMPRESA ............ 004  017  9(014)  CGC + FILIAL
+\par NUMERO DA AGENCIA NA REDE DO BANCO ........ 018  021  9(004)
+\par CODIGO DA CONTA DA EMPRESA NO BANCO ....... 022  041  X(020)
+\par DIFERENCIADOR ENTRE REGISTROS DE TRANSACAO .042  042  X(001)  '0'- SALDO INICIAL
+\par ***   RESERVADO  ***** .....................043  080  X(038)  BRANCOS
+\par DATA DO SALDO INICIAL DO EXTRATO .......... 081  086  9(006)  FORMATO DDMMAA
+\par VALOR ABSOLUTO DO SALDO INICIAL ........... 087  104  9(018)  SALDO C/2 DECIMAIS
+\par SITUACAO DO SALDO (DEVEDOR/CREDOR) .........105  105  X(001)  'D'/'C'
+\par ***   RESERVADO  ***** .................... 106  189  X(084)  BRANCOS
+\par CHAVE GERAL ............................... 190  200  X(011)
+\par IDENTIFICACAO DO TIPO DE SERVICO .......... 190  191  X(002)  '04'
+\par NUMERO DO BANCO NA CAMARA DE COMPENSACAO ...192  194  9(003)  275
+\par NUMERO SEQUENCIAL DO REGISTRO NO ARQUIVO ...195  200  9(006)  DE 000001 A 999999
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\f6 \page LAY-OUT DOS REGISTROS    
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6 
+\par 
+\par 
+\par }\pard \fi720\nowidctlpar\widctlpar\adjustright {\b\f6 REGISTRO DE TRANSACAO  -  LANCAMENTO    
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6 
+\par 
+\par }{\b\f6 CAMPO                                    POSICOES   FORMATO   CONTEUDO
+\par                                          DE   ATE
+\par }{\f6 IDENTIFICACAO DO TIPO DE REGISTRO ...... 001  001    X(001)   '1'
+\par CODIGO DE INSCRICAO DA EMPRESA ......... 002  003    X(002)   '01' - CPF
+\par                                                               '02' - CGC
+\par                                                               '03' - PIS
+\par                                                               '98' - OUTROS
+\par                                                               '99' - NAO TEM
+\par NUMERO DE INSCRICAO DA EMPRESA ..........004  017    9(014)   CGC + FILIAL
+\par NUMERO DA AGENCIA NA REDE DO BANCO ..... 018  021    9(004)
+\par CODIGO DA CONTA DA EMPRESA NO BANCO .....022  041    X(020)
+\par DIFERENCIADOR ENTRE REGISTROS TRANSACAO..042  042    X(001)   '1' - LANCAMENTO
+\par IDENTIFICADOR PADRAO DO LANCAMENTO ..... 043  045    X(003)   VER NOTA 1
+\par IDENTIFICADOR DO TIPO DE LANCAMENTO 
+\par UTILIZADO  NO BANCO .................... 046  049    X(004)
+\par DESCRICAO DO LANCAMENTO .................050  074    X(025)
+\par NUMERO DE DOCUMENTO DE LANCAMENTO ...... 075  080    9(006)
+\par DATA DO LANCAMENTO ..................... 081  086    9(006)   FORMATO DDMMAA
+\par VALOR ABSOLUTO DO LANCAMENTO ........... 087  104    9(018)   VALOR C/2 DECIMAIS
+\par *****   RESERVADO  ***** ................105  105    X(001)   BRANCO
+\par CODIGO DE PAGAMENTO IPMF ............... 106  106    X(001)   BRANCO=  
+\par                                                               NAO HOUVE IPMF  
+\par                                                               '*'=  
+\par                                                               SE HIST DEBITO=  
+\par                                                               IPMF DEBITADO
+\par                                                               SE HIST CREDITO=   
+\par                                                               IPMF CREDITADO
+\par VALOR ABSOLUTO DO IPMF ..................107  119    9(013)   VALOR C/2 DECIMAIS
+\par                                                               IPMF
+\par *****   RESERVADO  ***** ................120  189    X(070)   BRANCOS
+\par CHAVE GERAL ............................ 190  200    X(011)
+\par IDENTIFICACAO DO TIPO DE SERVICO ....... 190  191    X(002)   '04'
+\par NUMERO DO BCO NA CAMARA DE COMPENSACAO ..192  194    9(003)
+\par NUMERO SEQUENCIAL DO REGISTRO NO ARQUIVO.195  200    9(006)
+\par 
+\par NOTA 1:  TABELA DE CATEGORIA DE LANCAMENTOS
+\par 
+\par 
+\par }\pard \fi720\nowidctlpar\widctlpar\adjustright {\f6 DEBITO                                CREDITO
+\par 102 - ENCARGOS                        202 - PROCEDIMENTOS DE COBRANCA
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6       103 - ESTORNOS                        203 - DEVOLUCAO DE CHEQUES
+\par       104 - LANCAMENTOS AVISADOS            204 - ESTORNOS
+\par       101 - CHEQUES                         205 - LANCAMENTOS AVISADOS
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\f6 \page }{\b\f6  LAY-OUT DOS REGISTROS}{\f6     
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6   
+\par 
+\par 
+\par }\pard \fi720\nowidctlpar\widctlpar\adjustright {\b\f6 REGISTRO DE TRANSACAO  -  SALDO FINAL   
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\f6 
+\par 
+\par 
+\par   
+\par CAMPO                                       POSICOES   FORMATO  CONTEUDO
+\par                                             DE   ATE
+\par }{\f6 IDENTIFICACAO DO TIPO DE REGISTRO ......... 001  001   X(001)   '1'
+\par CODIGO DE INSCRICAO DA EMPRESA ............ 002  003   X(002)   '01' - CPF
+\par                                                                 '02' - CGC
+\par                                                                 '03' - PIS
+\par                                                                 '98' - OUTROS
+\par                                                                 '99' - NAO TEM
+\par NUMERO DE INSCRICAO DA EMPRESA ............ 004  017   9(014)   CGC + FILIAL
+\par NUMERO DA AGENCIA NA REDE DO BANCO .........018  021   9(004)
+\par CODIGO DA CONTA DA EMPRESA NO BANCO ........022  041   X(020)
+\par DIFERENCIADOR ENTRE REGISTROS DE TRANSACAO..042  042   X(001)   '2'-SALDO FINAL
+\par *****   RESERVADO  ***** .................. 043  080   X(038)   BRANCOS
+\par DATA DO SALDO FINAL DO EXTRATO ............ 081  086   9(006)   FORMATO DDMMAA
+\par VALOR ABSOLUTO DO SALDO FINAL ............. 087  104   9(018)   VLR C/2 DECIMAIS
+\par SITUACAO DO SALDO (DEVEDOR/CREDOR) ........ 105  105   X(001)   'D'/'C'
+\par STATUS DO SALDO (PARCIAL/FINAL) ........... 106  106   X(001)   'P'/'F'
+\par *****   RESERVADO  ***** ...................107  189   X(083)   BRANCOS
+\par CHAVE GERAL ............................... 190  200   X(011)
+\par IDENTIFICACAO DO TIPO DE SERVICO .......... 190  191   X(002)   '04'
+\par NUMERO DO BANCO NA CAMARA DE COMPENSACAO .. 192  194   9(003)
+\par NUMERO SEQUENCIAL DO REGISTRO NO ARQUIVO .. 195  200   9(006)
+\par 
+\par 
+\par 
+\par 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\f6 LAY-OUT DOS REGISTROS    
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6   
+\par 
+\par 
+\par }\pard \fi720\nowidctlpar\widctlpar\adjustright {\b\f6 REGISTRO TRAILER DO ARQUIVO    
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\f6 CAMPO                                           POSICOES    FORMATO  CONTEUDO
+\par                                                 DE   ATE
+\par }{\f6 IDENTIFICACAO DO TIPO DE REGISTRO ............. 001  001    X(001)   '9'
+\par QUANTIDADE DE CONTAS NO ARQUIVO ............... 002  006    9(005)
+\par QUANTIDADE REGISTRO TIPO 1 NO ARQUIVO ......... 007  012    9(006)
+\par SOMA ABSOLUTA DOS VALORES LANCADOS A DEBITO ... 013  028    9(016)   VALOR C/2 
+\par        \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab    DECIMAIS
+\par SOMA ABSOLUTA DOS VALORES LANCADOS A CREDITO .. 029  044    9(016)   VALOR C/2 
+\par }\pard \fi720\li7200\nowidctlpar\widctlpar\adjustright {\f6    DECIMAIS
+\par }\pard \nowidctlpar\widctlpar\adjustright {\f6 *****   RESERVADO  ***** ...................... 045  189    X(145)   BRANCOS
+\par CHAVE GERAL ................................... 190  200    X(011)
+\par IDENTIFICACAO DO TIPO DE SERVICO .............. 190  191    X(002)   '04'
+\par NUMERO DO BANCO NA CAMARA DE COMPENSACAO ...... 192  194    9(003)
+\par NUMERO SEQUENCIAL DO REGISTRO NO ARQUIVO ...... 195  200    9(006)
+\par 
+\par 
+\par 
+\par 
+\par }}

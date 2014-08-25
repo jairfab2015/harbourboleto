@@ -1,0 +1,293 @@
+/*
+ * $Id: ChangeLog,v 1.68 2013/11/08 10:59:40 marioargon Exp $
+ */
+
+/* Use this format for the entry headers:
+   YYYY-MM-DD HH:MM UTC[-|+]hhmm Your Full Name <your_email@address>
+   For example:
+   2002-12-01 13:30 UTC+0100 Foo Bar <foo.bar@foobar.org>
+*/
+
+2014-08-25 07:29 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    Mudança para a casa nova 
+
+
+2013-11-08 08:58 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    Ajuste no santander Banespa "033"
+
+2013-05-06 14:23 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    alteração dos gifs para 13mm de altura, obrigado Fabio Nery
+
+
+2013-04-23 08:30 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    oBoleto.prg
+    Ajustado para 7 posições Banco do Brasil ( novo leiaute )
+    Ajustado para imprimir 3 boletos por folha ( Toninho Silva )
+    Ajustado para imprimir 4 boletos por folha ( Mario Simões Filho)
+    Entre outras melhorias e ajustes.. 
+
+2012-08-31 09:30 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    oboleto.prg
+    acrecentado BB Convenio NN 7 posissões colaboração do Toninho Silva ( SysTux ) <toninho.sp@gmail.com> 
+
+2010-11-26 16:05 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    oboleto.prg
+    Acrecentado o Banco 070 BRB colaboração de Taibnis Vieira <tbnvieira@uol.com.br>
+
+2010-04-05 16:19 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    oboleto.prg
+    ajustes no BB carteira sem registro de acordo com o manual, carteiras 16 e 18
+    alteração fornecida pelo Toninho Silva ( SysTux ) <toninho.sp@gmail.com> 
+
+2010-01-05 16:10 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    oboleto.prg
+    alguns ajustes para otimização do fonte
+
+2010-01-05 10:30 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    Leiaute boleto 104-CAIXA ( padrão SIGCB ) + via controle do cedente ( HOMOLOGADO )
+    Remessa 104 Registrada ( HOMOLOGADO )
+    Retorno 104 ( HOMOLOGADO )
+    Visualização via Firefox linux
+    Doc => CNAB240_SIGCB CAIXA.PDF
+    Doc => Codigo Barras SIGCB.PDF
+    Entre outros pequenos ajustes/adequação...
+    estes ajustes foram feitos pelo Toninho Silva , systux@yahoo.com.br
+
+2008-03-18 13:35 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    ajuste no UniBanco (409) carteira especial
+    passei a usar a função DTOCY(data,mascara) fornecida pelo Jose Claudio <jc@san.psi.br>, ela se encontra no xhbrun.prg
+
+2008-01-16 13:35 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    Os Bancos Meridional (008) ,Banespa (033) e Santander (353),  tem o mesmo CampoLivre e utilizam CNAB240
+
+2007-11-30 15:34 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+    adicionado a remessa para HSBC via CNAB400.
+    Boleto - Cobrança registrada.
+
+2007-11-19 09:50 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+     Impressão dos Boletos para o Santander , retorno via CNAB240 para qualquer banco
+
+2007-11-13 15:34 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    adicionado a remessa para Santander/Banespa via CNAB240, em breve impressão dos boletos 
+
+2007-08-01 21:30 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+    <hboleto.prg> - Esse programa lê um arquivo .ini de configurações de boletos e gera os boletos a partir dele.
+    Gostaria de ter feito com xml, ao invés de ini, mas não conhecia nenhuma classe pronta p/ xml ... e fiz com ini mesmo.
+    Se alguém quiser/puder mudar p/ xml, fique à vontade!
+
+2007-06-01 14:19 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    mudança na forma de imprimir html, agora temos o objeto HTMLPRINT
+    de autoria de Laverson Espíndola <laverson.espindola@gmail.com>
+
+2007-03-14 21:10 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+    Bug boleto 409-Unibanco
+    Boleto do Banco do Brasil - Carteiras 17/18
+    Remessa CNAB-400 Banco do Brasil
+
+2007-02-13 10:08 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+     agora ja lemos arquivos de retorno do safra
+     emissão de boleto para o safra na carteira EXPRESS resolvido
+
+2006-09-16 16:40 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+    Bug remessa do 356-Real/ABN
+
+2007-01-26 15:06 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+     algo de "estranho" quanto ao Safra, um cliente passou a usar o Safra e
+     tive problemas ...
+     Gilberto se voce estiver por ai entre em contato ...
+
+2007-01-25 10:45 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+     Ajuste na tag body do boleto para compatibilidade com o IE7
+
+2006-10-16 10:45 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+     Ajuste no campo livre da caixa, quem utiliza a caixa favor me informar
+     se esta funcionando
+
+2006-10-16 10:45 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+     ajuste no campo livre da Caixa por enquanto so funciona carteira 8, quem tiver
+     mais informações me avise :-)
+
+2006-09-28 16:49 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+     implementação do Retorno do Itaú
+
+2006-09-27 08:49 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    com a ajuda do Gilberto Silverio o Safra já está no oRemessa, temos um exemplo de
+    utilização fornecido pelo Gilberto, safra.prg
+
+2006-09-16 16:40 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+    Alterações na mensagem do Boleto (Exigência do Unibanco)
+    Acredito q o boleto do Unibanco ainda esteja errado, devo resolver esta semana. Eles são muito complicados...
+    Alterações no Boleto (Banco Real/ABN) e Implementação do arquivo de remessa do Banco Real/ABN 356.
+
+2006-09-05 08:49 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    Implementação do arquivo de remessa do banco 422 - Safra contribuição do 
+    Gilberto Silverio, conforme o Gilberto me informou esta implementado "conta vinculada"
+    esta carteira não gera boleto pelo cliente, os boletos são gerados pelo banco
+
+2006-09-04 08:58 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    ajuste na integração do oBoleto com o oRemessa, oRemessa ainda não atende a todos os Bancos
+    implementados no oBoleto
+
+2006-08-30 16:07 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    bug no registro de mensagens do arquivo de remessa
+
+2006-08-16 13:54 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    o Win98/ME nao tem a variavel de ambiente "ProgramFiles"
+
+2006-08-14 22:30 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+    Bug - Código de Barras - Unibanco
+
+2006-08-09 10:23 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    alterações no oBoleto para permitir comandos HTML nas instruções2 , agora os valores
+    de Multa e Mora serão impressos em negrito
+
+2006-08-04 13:30 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+    Acesso a oRem:NomeRem
+
+2006-08-04 11:00 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+    Melhorias no layout do bol.htm
+    Logotipo => width="80" height="20" (Razão = 4)
+    Falta: - Não consegui colocar um espaço antes da segunda linha da observação;
+           - Ajustar o boleto para a linha da divisão ficar exatamente na metade de uma folha A4.
+
+2006-08-03 12:07 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    agora "cabem" dois boletos por pagina !!!!
+
+2006-08-03 09:28 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    oBoleto => acrecentei novos estilos a folha
+
+2006-08-02 20:43 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+    Cobrança Direta Unibanco implementada (falta especial)
+    bug Remessa Unibanco consertado. Mais um banco atendido pelo harbourboleto!
+
+2006-07-31 14:13 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    oBoleto:open criei mais um parametro 'cPastaRem' => pasta onde deve ser criado o arquivo
+    de remessa
+
+2006-07-31 08:49 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    achei alguns Bugs, nada grave, criei 'cFillTrailer' no oRemessa
+
+2006-07-30 11:05 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+    Desfiz algumas das alterações abaixo. O importante é não mexer em variáveis do cabeçalho, como
+    ::cNumAgencia e ::cCarteira. Variáveis do detalhe, como ::cNumCC e ::cNossoNumero pode mexer...
+
+2006-07-30 11:05 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+    No meu cliente, os boletos são criados num dia. E o arquivo remessa no dia seguinte.
+    Criei ::Dtemis p/ resolver este problema.
+    Ao refazer ::cNumAgencia, ::cNossoNumero no prório objeto, à partir do segundo boleto, às vezes
+    dava bug e não exibia corretamente. Coloquei variáveis de memória p/ o cálculo do código de barras.
+
+2006-07-30 11:05 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+    + Inicialização de oRemessa no local correto.
+    - Retirei ? ::cLine porque o programa pode ser usado por aplicações gui. Coloquei p/ gravar sempre
+                ::cLine, assim podemos debugar, olhando o arquivo de remessa.
+
+2006-07-29 10:05 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    + Ajustes no oBoleto por causa do oRemessa e + correções no oRemessa ...
+    o arquivo de remessa DEVE ser gerado mesmo que a cobrança NÃO seja registrada
+
+2006-07-28 18:00 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    Ajustes no oBoleto por causa do oRemessa , e correções no oRemessa
+
+2006-07-28 09:32 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+   oBoleto ajuste para manter conpatibilidade com a primeira versão nela o modelo era
+   'boletoXXX.htm' onde XXX era o codigo do banco
+
+2006-07-27 15:37 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+   mais melhorias uma delas é a criação do Metodo SetNomeRem()
+   estava muito "feito" 'oBol:oRem:NomeRem:=cArq'
+
+2006-07-27 11:03 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+   oRetorno => Melhorias Diversas , por Ex: um "close" automático
+               troquei o aOcorencia por cOcorencia, faz mais sentido ...
+
+2006-07-26 13:12 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+   oRetorno => primeira versão operacional disponivel !!!
+
+2006-07-26 08:40 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+   Bug oBoleto:Print
+
+2006-07-25 22:45 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+   Melhorias Diversas, como não imprimir se não foram adicionados boletos / idem arq. remessa
+
+2006-07-25 16:20 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+   bugs ajuste linux no windows.
+
+2006-07-25 10:02 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+    xhbrun,oboleto => ajustes para poder rodar no linux
+
+2006-07-25 09:08 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+   oBoleto => acertei o "eject" automatico, o principio e "saber" se ja foi gerado um boleto
+              anterior, as alterações foram feitas nos metodos Execute e Eject
+
+2006-07-25 00:40 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+   bol.htm => acerto tabela
+   oBoleto, oRemessa, demoboleto => Padronização
+
+2006-07-24 23:00 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+   oBoleto, demoboleto => Eject automatico
+
+2006-07-24 22:10 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+   oBoleto => Preenchimento "automatico" do DV da Agencia e da Conta
+
+2006-07-24 16:50 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+   oBoleto, oRemessa, acento.prg, harbourboleto.ch => bug Acentuação - OEM
+
+2006-07-24 14:10 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+   oBoleto, oRemessa => implementação Padrão CNAB240/FEBRABAN
+   Auxílio com código fornecido por CL Rogerio Kepler / Kepler Sistemas / www.kepler.inf.br
+
+2006-07-24 13:20 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+oRemessa.prg => definição do constructor
+                alteração na linha:
+   IF !EMPTY(::cDvBco) .AND. FILE(::Destino + "logo" + cBco + ".gif")
+                Para
+   IF !EMPTY(::cDvBco) // .AND. FILE(::Destino + "logo" + cBco + ".gif")
+                assim é possivel colocar as imagens na web e enviar apenas
+                o html por e-mail ;-)
+
+2006-07-22 12:23 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+oRemessa.prg => implementação de remessa para o Bradesco
+
+2006-07-20 15:03 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+oboleto.prg => alteração no caminho do navegador
+               funcionando perfeitamente com o Banco 356/275 - Real / ABN AMRO
+               Obs: Usar o 356
+               metodo merge "troca" crlf por <BR> assim ta pra formatar as instruções 
+               de uma forma melhor
+
+2006-07-19 13:20 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+      acento.prg => Correção p/ tratar acentuação ANSI/OEM
+      boleto\bol.htm => Correção p/ tratar acentuação, melhoria lay-out
+      oboleto.prg => Correção - Remessa Itaú
+      oremessa.prg => Correção - Remessa Itaú
+      demoboleto.prg => Correção - Remessa Itaú
+
+2006-07-20 11:09 UTC-0300 Mario Simões Filho <mario@argoninformatica.com.br>
+acento.prg => acrecentei alguns acentos 
+
+2006-07-18 15:05 UTC-0300 Marcelo Sturm <marcelosturm@uol.com.br>
+  Versão Inicial do cvs
+  acento.prg => Programas p/ tratar acentuação
+  demoboleto.prg => Programa p/ demonstrar a Geração de Boletos e Arquivo Remessa
+  oboleto.prg => Classe oBoleto
+  oremessa.prg => Classe oRemessa
+  xhbrun.prg => Visualizar o .htm gerado
+  demobol.bc => make file p/ borland / hbmake
+  boleto\bol.htm => Boleto Genérico, preenchido pela classe oBoleto.
+  boleto\code??.gif => Arquivos .gif p/ gerar o código de Barras
+  boleto\logo???.gif => Arquivos .gif com o logo dos Bancos
+  A versão encontra-se funcional p/ Geração de Boletos p/ os bancos:
+    => 341-Itaú
+    => 237-Bradesco
+  Com poucas alterações poderia atender rapidamente os bancos:
+    => 001-Brasil
+    => 033-Banespa
+    => 104-Caixa
+    => 356/275 Real - ABN AMRO
+    => 422-Safra
+  A versão encontra-se funcional p/ Geração de Arquivo Remessa p/ o banco:
+    => 341-Itaú
+  Com poucas alterações poderia atender rapidamente os bancos:
+    => 237-Bradesco
+    => 409-Unibanco

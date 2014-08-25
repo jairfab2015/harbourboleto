@@ -1,0 +1,562 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033\deftab708{\fonttbl{\f0\fmodern\fcharset0 Courier New;}{\f1\froman\fcharset0 Times New Roman;}}
+{\*\generator Msftedit 5.41.15.1503;}\viewkind4\uc1\pard\tx0\tx959\tx1918\tx2877\tx3836\tx4795\tx5754\tx6713\tx7672\tx8631\lang1046\f0\fs20 Nota.. a/ nos campos do arquivo remessa que possuirem DATA no         \par
+          formato /DDMMAA/, deverao conter:                           \par
+          I  - para ano igual a 2001 /DDMMAA/ - /AA/ igual a 01.,     \par
+          II - para ano igual a 2002 /DDMMAA/ - /AA/ igual a 02, e    \par
+               assim sucessivamente ateh o ano 2069                   \par
+       b/ nas instrucoes e mensagens, utilizar somente letras         \par
+          maiusculas, sem acentuacao e sem /ce cedilha/.              \par
+       c/ Caracteristicas do Arquivo Remessa..                        \par
+          I  - Nome do Arquivo /DATA SET NAME/ = CBR641.,             \par
+          II - Tamanho do registro= 400 bytes.,                       \par
+          III- Organizacao = sequencial.,                             \par
+          IV - Formato dos registros =                                \par
+               - FB /Fixos Blocados/                                  \par
+               - Formato dos campos /9/ - numerico                    \par
+                                    \lang1034 /X/ - alfanumerico                \par
+       d/ eh composto de tres tipos de registro..                     \par
+          \lang1046 I  - HEADER - registro de abertura do arquivo. Contem as    \par
+               informacoes da empresa convenente e agencia            \par
+               centralizadora do convenio;                            \par
+          II - DETALHE - contem as informacoes detalhadas do          \par
+               titulo, cedente, sacado, e instrucoes para o           \par
+               processamento.,                                        \par
+          III- TRAILER - eh o registro de encerramento do             \par
+               arquivo.                                               \par
+       e/ Informacoes gerais..                                        \par
+          I  - o arquivo conterah relacao de titulos para cobranca    \par
+          II - pode ser remetido mais de um arquivo, desde que com    \par
+               dados diferentes, para processamento no mesmo dia."    \par
+                                                                      \par
+                                                                      \par
+01. Descricao dos campos..                                            \par
+                                                                      \par
+\lang1033 HEADER                                                                \par
+..................................................................    \par
+N.  POSICOES  PICTURE  USAGE    CONTEUDO                              \par
+\lang1046 ............................................................. ....    \par
+01  001 a 001 9/001/   Display  0 /zero/                              \par
+02  002 a 002 9/001/   Display  1 /um/                                \par
+03  003 a 009 X/007/   Display  REMESSA: para envio de arquivo para   \par
+                                         processamento                \par
+                                TESTE  : para envio de arquivo para   \par
+                                         teste \endash  Vide observa\'e7\'f5es     \par
+04  010 a 011 9/002/   Display  01                                    \par
+05  012 a 019 X/008/   Display  COBRANCA                              \par
+06  020 a 026 X/007/   Display  Brancos                               \par
+07  027 a 030 9/004/   Display  Prefixo da agencia /onde estah        \par
+                                cadastrado o convenente lider do      \par
+                                cedente/                              \par
+08  031 a 031 X/001/   Display  DV-prefixo da agencia                 \par
+09  032 a 039 9/008/   Display  Codigo do cedente/nr. da conta        \par
+                                corrente que estah cadastrado o       \par
+                                convenio lider do cedente/            \par
+10  040 a 040 X/001/   Display  DV-codigo do cedente                  \par
+11  041 a 046 9/006/   Display  Zeros  \par
+12  047 a 076 X/030/   Display  Nome da empresa                       \par
+13  077 a 094 X/018/   Display  001BANCO DO BRASIL                    \par
+14  095 a 100 9/006/   Display  Data da gravacao /DDMMAA/. nao        \par
+                                serao aceitas datas de gravacao       \par
+                                futuras                               \par
+15  101 a 107 9/007/   Display  Sequencial da remessa/vide obs/       \par
+16  108 a 129 X/022/   Display  Brancos                               \par
+17  130 a 136 9/007/   Display  N\'famero do Conv\'eanio com o Banco (acima de \par
+                                1.000.000 (um milh\'e3o)\par
+18  137 a 394 X/258/   Display  Brancos                               \par
+19  395 a 400 9/006/   Display  Sequencial do registro-informar..     \par
+                                000001                                \par
+                                                                      \par
+OBSERVACOES                                                           \par
+O Banco fornecerah ao cedente, obrigatoriamente, os dados referentes  \par
+aos campos 07, 08, 09, 10, 11 17 e 18                                 \par
+............................................................          \par
+N.  POSICOES   OBSERVACOES                                            \par
+............................................................          \par
+03  003 a 007  TESTE: Neste caso, o arquivo somente poder\'e1 conter o   \par
+                      comando \ldblquote 01\rdblquote  \endash  Registro de T\'edtulo. Ser\'e1 gerado  \par
+                      arquivo-retorno contendo as ocorr\'eancias de      \par
+                      processamento verificadas no arquivo-remessa de \par
+                      teste.\par
+15  101 a 107  SEQUENCIAL DE REMESSA.. Numero da remessa efetuada     \par
+               pelo cliente. O Sistema nao controla tal numeracao,    \par
+               admitindo quebra na sequencia e repeticao de numero    \par
+               jah processado. Pode ser utilizado pelo cliente        \par
+               para seu proprio controle.                             \par
+                                                                      \par
+DETALHE (OBRIGAT\'d3RIO)                                                 \par
+..................................................................    \par
+N.  POSICOES  PICTURE  USAGE    CONTEUDO                              \par
+..................................................................    \par
+01  001 a 001 9/001/   Display  7                                     \par
+02  002 a 003 9/002/   Display  Tipo de inscricao da empresa          \par
+                                01-CPF                                \par
+                                02-CNPJ                               \par
+03  004 a 017 9/014/   Display  Inscricao da empresa                  \par
+04  018 a 021 9/004/   Display  Prefixo da agencia                    \par
+05  022 a 022 X/001/   Display  DV-prefixo da agencia                 \par
+06  023 a 030 9/008/   Display  Codigo do cedente/nr. conta           \par
+                                corrente da empresa/                  \par
+07  031 a 031 X/001/   Display  DV-codigo do cedente                  \par
+08  032 a 038 9/007/   Display  Numero do convenio                    \par
+09  039 a 063 X/025/   Display  Nr. controle do participante. Pode    \par
+                                conter qualquer dado de interesse     \par
+                                do cliente.Serah mantido nos          \par
+                                arquivos do Banco sem qualquer        \par
+                                tratamento.                           \par
+                                Toda vez que o titulo for incluido    \par
+                                no arquivo-retorno, este numero       \par
+                                tambem serah.                         \par
+10  064 a 080 9/017/   Display  Nosso numero. Vide /observacoes/      \par
+11  081 a 082 9/002/   Display  Numero da prestacao-informar ZEROS    \par
+12  083 a 084 9/002/   Display  Indicativo de grupo de valor          \par
+                                informar ZEROS                        \par
+13  085 a 087 X/003/   Display  Brancos                               \par
+14  088 a 088 X/001/   Display  Indicativo de SACADOR..               \par
+                                BRANCOS-nas pos.352 a 391             \par
+                                mensagens a criterio do cedente       \par
+                                A - nas pos.352 a 391 informar        \par
+                                nome e CPF/CNPJ do sacador.           \par
+15  089 a 091 X/003/   Display  Prefixo do titulo                     \par
+                                CARTEIRAS 31,51.. Preencher com SD    \par
+                                CARTEIRA 12.. Preencher com AIU.      \par
+                                DEMAIS CARTEIRAS.. Preencher com      \par
+                                AI.                                   \par
+16  092 a 094 9/003/   Display Variacao da carteira                   \par
+17  095 a 095 9/001/   Display Conta caucao.preencher com /ZEROS/.    \par
+18  096 a 101 9/006/   Display Numero do bordero..                   \par
+                               a/ carteira 51..                       \par
+                                  - ZEROS -caso o cedente envie       \par
+                                    mais de uma remessa para o CBR,   \par
+                                    na mesma previa, suas remessas se \par
+                                    tornarao uma unica no CIOPE.,     \par
+                                  - 900.000 a 999.000 - a remessa     \par
+                                    serah subdividida no CIOPE por    \par
+                                    bordero.                          \par
+                               b/ registro de titulos nas carteiras   \par
+                                  31/51 emitido contra empresas coli  \par
+                                  gadas - 900.000 a 999.999.,         \par
+                               c/ demais carteiras - ZEROS            \par
+19  102 a 106 X/005/   Display Tipo de Cobran\'e7a:                      \par
+                               /04DSC/-solicitacao de registro como   \par
+                                Cobran\'e7a DESCONTADA, quando utilizada \par
+                                a  Carteira 11 ou 17.                 \par
+                               /08VDR/-solicitacao de registro como   \par
+                                Cobran\'e7a VENDOR, quando utilizada a   \par
+                                Carteira 11 ou 17.                    \par
+                               /02VIN/-solicita\'e7\'e3o de registro como   \par
+                                Cobran\'e7a VINCULADA, quando utilizada  \par
+                                a Carteira 17.                        \par
+                               /BRANCOS/ para:                        \par
+                                Carteira 11, 12 e 17 - registrar como \par
+                                Cobran\'e7a Simples                      \par
+                                Carteira 31- registrar como Cobran\'e7a  \par
+                                Vinculada                             \par
+                                Carteira 51- registrar como Cobran\'e7a  \par
+                                Descontada                            \par
+20  107 a 108 9/002/   Display Carteira                               \par
+                               11-Cobranca Simples                    \par
+                               12-Cobranca Indexada                   \par
+                               17-Cobranca Direta Especial            \par
+                               31-Cobranca Vinculada                  \par
+                               51-Cobranca Descontada                 \par
+21  109 a 110 9/002/   Display Comando                                \par
+                               01-Registro de titulos/Ver Primeira    \par
+                                  \lang1033 Inst. Cod.-Posicao 157 a 158/       \par
+                               \lang1046 02-Solicitacao de Baixa /Ver           \par
+                                  Primeira Inst. Cod.-Pos. 157 a      \par
+                                  158/                                \par
+                               03-Pedido de debito em conta           \par
+                               04-Concessao de abatimento             \par
+                               05-Cancel. de abatimento               \par
+                               06-Alteracao de vcto. de titulo        \par
+                               07-Alteracao do numero de controle do  \par
+                                  participante                        \par
+                               08-Alteracao do numero do titulo dado  \par
+                                  pelo cedente                        \par
+                               09-Instrucao para protestar /Ver 1a.   \par
+                                  \lang1033 inst. Cod.-Pos. 157 a 158/          \par
+                               \lang1046 10-Instrucao para sustar protesto      \par
+                               11-Instrucao para dispensar juros      \par
+                               12-Alteracao de nome e endereco do     \par
+                                  sacado                              \par
+                               16-Altera\'e7\'e3o de juros mora             \par
+                               31-Conceder desconto                   \par
+                               32-Nao conceder desconto               \par
+                               33-Retificar desconto                  \par
+                               34-Alterar data para desconto          \par
+                               35-Cobrar Multa                        \par
+                                  - Vide Observacao do campo 35       \par
+                               36-Dispensar Multa                     \par
+                                  - Vide Observacao do campo  35      \par
+                               37-Dispensar Indexador                 \par
+                                  - Vide Observacao do campo 35       \par
+                               38-Dispensar Prazo Limite de           \par
+                                  Recebimento                         \par
+                                  - Vide Observacao do campo  35      \par
+                               39-Alterar Prazo Limite de             \par
+                                  Recebimento.                        \par
+                                  - Vide Observacao do campo 35       \par
+                               40-Alterar Modalidade de Cobran\'e7a:     \par
+                                  Observa\'e7oes:                        \par
+                                 a)v\'e1lida apenas para a Carteira 17,  \par
+                                   para alterar o t\'edtulo da Cobran\'e7a  \par
+                                   Simples para Cobran\'e7a Vinculada ou \par
+                                   da Cobran\'e7a Vinculada para         \par
+                                   Cobran\'e7a Simples;                  \par
+                                 b)a modalidade de Cobran\'e7a para a    \par
+                                   qual se destina a altera\'e7\'e3o deve   \par
+                                   ser informada no campo "Tipo de    \par
+                                   Cobran\'e7a" - posi\'e7\'e3o 102 a 106.     \par
+                                 c)a efetiva\'e7\'e3o dessa instru\'e7\'e3o, ap\'f3s \par
+                                   o seu processamento pelo Sistema   \par
+                                   do Banco, depende de libera\'e7\'e3o     \par
+                                   da ag\'eancia de relacionamento com a \par
+                                   empresa cedente.                   \par
+22  111 a 120 X/010/   Display Seu Numero - Nr. titulo dado pelo      \par
+                               cedente - vide obs. do campo 9         \par
+23  121 a 126 9/006/   Display Data de vencimento /DDMMAA/            \par
+                               888888-a vista                         \par
+                               999999-na apresentacao                 \par
+                               Obs.. Em ambos os casos, o vencimento  \par
+                                     ocorrerah 15 dias apos a data    \par
+                                     do registro no Banco.            \par
+24  127 a 139 9/011/v99Display Valor do titulo                        \par
+                               Carteira 12- em reais, na data de      \par
+                               emissao do titulo                      \par
+25  140 a 142 9/003/   Display Numero do Banco - /001/                \par
+26  143 a 146 9/004/   Display Prefixo da ag. Cobradora               \par
+                               preencher com /ZEROS/.O Sistema        \par
+                               indicarah a agencia cobradora pelo     \par
+                               CEP do sacado.                         \par
+27  147 a 147 X/001/   Display DV-pref. agencia cobradora..           \par
+28  148 a 149 9/002/   Display Especie de titulo                      \par
+                               01-Duplicata Mercantil                 \par
+                               02-Nota Promissoria                    \par
+                               03-Nota de Seguro                      \par
+                               05-Recibo                              \par
+                               08-Letra de Cambio                     \par
+                               09-Warrant                             \par
+                               10-Cheque                              \par
+                               12-Duplicata de Servico                \par
+                               13-Nota de Debito                      \par
+                               15-Apolice de Seguro                   \par
+                               21-Duplicata Rural                     \par
+                               25-Divida Ativa da Uniao     /OBS./    \par
+                               26-Divida Ativa de Estado    /OBS./    \par
+                               27-Divida Ativa de Municipio /OBS./    \par
+29  150 a 150 X/001/   Display Aceite                                 \par
+                               N-sem aceite                           \par
+                               A-com aceite                           \par
+30  151 a 156 9/006/   Display Data de emissao /DDMMAA/               \par
+31  157 a 158 9/002/   Display 1a instrucao codificada - vide         \par
+                               /OBSERVACOES/                          \par
+32  159 a 160 9/002/   Display 2a instrucao codificada                \par
+33  161 a 173 9/011/v99Display Juros de mora por dia-vide             \par
+                               /OBSERVACOES/                          \par
+34  174 a 179 9/006/   Display Data limite para Concessao de desconto \par
+                               /DDMMAA/ . O registro serah            \par
+                               recusado sempre que a data de          \par
+                               desconto for informada e o desconto    \par
+                               nao o for, ou a data do desconto for   \par
+                               superior a data do vencimento.         \par
+                               Data da operacao BBVENDOR, no formato  \par
+                               DDMMAA.                                \par
+35  180 a 192 9/011/v99Display Valor do desconto                      \par
+                               Se desconto por dia de antecipacao,    \par
+                               informar valor por dia e 777777 no     \par
+                               campo /data limite para concessao de   \par
+                               desconto/                              \par
+                               Para BBVENDOR - vide observacoes       \par
+\lang1033 36  193 a 205 9/011/v99Display Cart. 15.. \lang1046 Valor do IOF                \par
+                               Cart. 12..                             \par
+                               1/ pos. 193 a 204.. quantidade de      \par
+                                  unidades variaveis na data de       \par
+                                  emissao do titulo. Ate sete         \par
+                                  inteiros e, obrigatoriamente,cinco  \par
+                                  decimais.,                          \par
+                               2/ pos. 205.. especie de unidade       \par
+                                  variavel..                          \par
+                                  1-FAJTR 5-MARCO ALEMAO              \par
+                                  2-DOLAR 6-FTR                       \par
+                                  3-EURO  7-IDTR                      \par
+                                  4-IENE                              \par
+                               3/ Demais carteiras-preencher com      \par
+                                  ZEROS.                              \par
+37  206 a 218 9/011/v99Display Valor do abatimento permitido no       \par
+                               registro das carteiras.. 11, 17 e 31   \par
+38  219 a 220 9/002/   Display Tipo de inscricao do sacado            \par
+                               00 - ISENTO                            \par
+                               01 - CPF                               \par
+                               02 - CNPJ                              \par
+39  221 a 234 9/014/   Display CNPJ ou CPF do sacado                  \par
+40  235 a 271 X/037/   Display Nome do sacado                         \par
+41  272 a 274 X/003/   Display Brancos                                \par
+42  275 a 311 X/037/   Display Endereco do sacado                     \par
+43  312 a 326 X/015/   Display Brancos                                \par
+44  327 a 334 9/008/   Display CEP do endereco do sacado              \par
+45  335 a 349 X/015/   Display Cidade do sacado                       \par
+46  350 a 351 X/002/   Display UF da cidade do sacado                 \par
+\lang1033 47  352 a 391 X/040/   Display Observacoes                            \par
+                               \lang1046 Se a posicao 82 for informado          \par
+                               BRANCO..                               \par
+                               Os dados informados nesse campo        \par
+                               serao listados no campo /instrucoes/   \par
+                               do boleto de cobranca e NAO SERAO      \par
+                               IMPRESSOS NO CASO DE EMISSAO DE 2.     \par
+                               VIA NAS AGENCIAS DO BB OU ATRAVES DO   \par
+                               \lang1033 BB OFFICE BANKING. \lang1046 Nao informar dados  \par
+                               conflitantes com as informacoes   dos  \par
+                               demais campos, como juros,IOF,         \par
+                               desconto, protesto, etc.               \par
+                               Se a posicao 82 for informado A..      \par
+                               Os dados informados nesse campo serao  \par
+                               listados no campo/SACADOR-AVALISTA/    \par
+                               do fichamento de cobranca.             \par
+                               Neste caso, o campo deverah ser        \par
+                               preenchido com o nome do SACADOR/AVA   \par
+                               LISTA, seguido do literal CNPJ ou CPF  \par
+                               e do numero do documento, sem traco    \par
+                               ou barra.                              \par
+                               Entre o nome do SACADOR/AVALISTA e o   \par
+                               literal CNPJ/CPF deverah ser dado um   \par
+                               /espaco/ em branco.                    \par
+48  392 a 393 X/002/   Display Numero de dias para protesto-caso o    \par
+                               campo /comando/esteja preenchido com   \par
+                               /01-registro de titulos/ e o campo     \par
+                               /instrucao codificada 1/ tenha sido    \par
+                               preenchido com /06/,informar o numero  \par
+                               numero de dias para protesto, de       \par
+                               /06 a 29, 35 ou 40/dias,senao ZEROS    \par
+49  394 a 394 X/001/   Display BRANCO                                 \par
+50  395 a 400 9/006/   Display Sequencial de registro- incrementar    \par
+                               em 1 a cada novo registro              \par
+                                                                      \par
+                                                                      \par
+DETALHE OPCIONAL (REMESSA) - ENVIO DE BLOQUETO POR EMAIL              \par
+....................................................................  \par
+N.  POSICOES  PICTURE  USAGE    CONTEUDO                              \par
+....................................................................  \par
+01  001 a 001 X/001/   Display  5 /cinco/                             \par
+02  002 a 003 9/002/   Display  1-Bloqueto por e-mail                 \par
+03  004 a 139 X/136/   Display  135 /cento e trinta e cinco/ primei   \par
+                                ras posi\'e7\'f5es                          \par
+                                Obs: os endere\'e7os de e-mail dever\'e3o   \par
+                                ser separados por ";" (ponto e v\'edr    \par
+                                gula), sem espa\'e7os                    \par
+04  140 a 394 X/255/   Display  Brancos                               \par
+05  395 a 400 X/006/   Display  Sequencial Registro                   \par
+......................................................................\par
+                                                                      \par
+OBS:                                                                  \par
+a) Este registro somente ser\'e1 validado se o cliente estiver           \par
+   previamente autorizado no sistema de cobran\'e7a do BB;               \par
+b) Os e-mails dever\'e3o conter obrigatoriamente o caracter "@"          \par
+   (arroba);                                                          \par
+c) O envio de bloqueto por e-mail \'e9 valido somente para cobran\'e7a com  \par
+   registro, de conv\'eanios em que o Banco imprime e expede o bloqueto. \par
+d) N\'e3o permitido para registro de t\'edtulos nas modalidades descontadas \par
+   ou Vendor;                                                         \par
+e) O e-mail n\'e3o ser\'e1 enviado quando o sacado, cliente do Banco, optar \par
+   pelo "Bloqueto Eletr\'f4nico";                                        \par
+f) Poder\'e1 ser informado mais de um endere\'e7o de e-mail para o mesmo    \par
+   bloqueto, dentro dos limites do campo do arquivo remessa destinado \par
+   a essa finalidade. (campo 03)                                      \par
+g) O bloqueto ser\'e1 impresso e postado caso o n\'famero do documento      \par
+   (CPF/CNPJ)e/ou endere\'e7o de e-mail n\'e3o sejam v\'e1lidos (n\'e3o cont\'e9m o  \par
+   caracter @).                                                       \par
+h) O bloqueto ser\'e1 impresso e postado, caso n\'e3o seja acessado num     \par
+   prazo de tr\'eas dias a partir do registro do t\'edtulo. No bloqueto de  \par
+   cobran\'e7a impresso e postado constar\'e1 informa\'e7\'e3o de que o t\'edtulo foi\par
+   disponibilizado por e-mail. Ap\'f3s este prazo, caso o bloqueto seja  \par
+   acessado, ser\'e1 informado que j\'e1 foi impresso e postado. A op\'e7\'e3o de \par
+   impress\'e3o continuar\'e1 dispon\'edvel. Se for impresso, ser\'e1 inclu\'edda a  \par
+   mensagem de 2\'aa via no bloqueto.                                    \par
+i) Ap\'f3s a liquida\'e7\'e3o ou baixa  do t\'edtulo, o bloqueto n\'e3o ficar\'e1 mais  \par
+   dispon\'edvel no site do Banco.                                       \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+                          OBSERVACOES                                 \par
+                                                                      \par
+....................................................................  \par
+N.    POSICOES    OBSERVACOES                                         \par
+....................................................................  \par
+10/11 064 a 080   NOSSO NUMERO/DV..CARTEIRAS 11,31 e 51..             \par
+                  Preencher com zeros.                                \par
+                  CARTEIRAS 12,15 e 17 ..                             \par
+                  a/ Se numeracao a cargo do Banco.. Preencher com    \par
+                     zeros.                                           \par
+                  b/ Se numeracao a cargo da empresa, compor da       \par
+                     seguinte forma..                                 \par
+                     Pos. 064/070-Numero do Convenio acima de 1.000.000\par
+                     (um milh\'e3o)                    .                 \par
+                     Pos. 071/080-Numero sequencial a partir de       \par
+                     0000000001, nao sendo admitida reutilizacao ou   \par
+                     duplicidade                                      \par
+18    089 a 089   CONTA CAUCAO.. Preencher com zero                   \par
+\pard 24    109 a 110   COMANDO- Quando o comando for igual "16" - Alterar Juros de \par
+                  Mora - preencher as posi\'e7\'f5es 174 a 192 conforme abaixo: \par
+                  Campo       Conte\'fado \par
+                  174 a 174   Cod Juros\par
+                              1 \endash  Valor\par
+                              2 \endash  Percentual\par
+                  175 a 180   Zeros Informar zeros. \par
+                  \lang1033 181 a 192   Vlr-Per-Juros \par
+                              \lang1046 C\'f3digo Multa "1", informar valor da multa. \par
+\pard\tx0\tx959\tx1918\tx2877\tx3836\tx4795\tx5754\tx6713\tx7672\tx8631                               C\'f3digo Multa "2", informar percentual. \par
+25    111 a 120   NUMERO DO TITULO DADO PELO CEDENTE.. Poderah        \par
+                  conter qualquer dado de interesse do cliente.       \par
+                  Serah mantido nos arquivos do Banco sem qualquer    \par
+                  tratamento. Toda a vez que o titulo for incluido    \par
+                  no arquivo-retorno, esse numero tambem serah.       \par
+26    121 a 126   VENCIMENTO DO TITULO..CARTEIRAS 11, 12, 15, 17 e    \par
+                  31.. Admitidos prazos ateh 1.100 dias.              \par
+                  CARTEIRA 51.. Admitidos prazos ateh 179 dias.       \par
+                  Obs.. O Sistema aceita o registro de titulos        \par
+                        vencidos nas carteiras 11, 12, 15, 17 e       \par
+                        31 ateh um dia util anterior ao prazo         \par
+                        cadastrado no Sistema para baixa automatica.  \par
+29/30 143 a 147   PREFIXO/DV DA AGENCIA COBRADORA.. Essas             \par
+                  posicoes poderao ser preenchidas com zeros e o      \par
+                  Sistema indicarah a cobradora atraves do CEP do     \par
+                  sacado /Pos. 327 a 334/.                            \par
+31    148 a 149   ESPECIE DE TITULO.. As especies..                   \par
+                  25 - Divida Ativa da Uniao.,                        \par
+                  26 - Divida Ativa de Estado.,                       \par
+                  27 - Divida Ativa de Municipio.,                    \par
+                  somente sao admissiveis nas Carteiras 11 /Cobranca  \par
+                  Simples/ e Carteira 17 /Cobranca Direta especial/   \par
+34    157 a 158   PRIMEIRA INSTRUCAO CODIFICADA                       \par
+                  Se comando 01/IGUAL/Registro de titulo /Pos. 109 a  \par
+                  a 110/, codigos admissiveis..                       \par
+                  00-Ausencia de instrucoes                           \par
+                  01-Cobrar juros - Dispensavel se informado          \par
+                     o valor a ser cobrado por dia de atraso.         \par
+                  03-Protestar no terceiro dia util apos vencido      \par
+                  04-Protestar no quarto dia util apos vencido        \par
+                  05-Protestar no quinto dia util apos vencido        \par
+                  06-INDICA PROTESTO EM DIAS CORRIDOS, COM PRAZO DE   \par
+                     06 A 29, 35 OU 40 DIAS CORRIDOS. Obrigatorio     \par
+                     impostar, nas posicoes 392 a 393 o prazo de      \par
+                     protesto desejado.. 6 a 29, 35 ou 40 dias.       \par
+                  07-Nao protestar                                    \par
+                  10-Protestar no 10. dia corrido apos vencido        \par
+                  15-Protestar no 15. dia corrido apos vencido        \par
+                  20-Protestar no 20. dia corrido apos vencido        \par
+                  22-Conceder desconto soh ateh a data estipulada     \par
+                  25-Protestar no 25. dia corrido apos vencido        \par
+                  30-Protestar no 30. dia corrido apos vencido        \par
+                  45-Protestar no 45. dia corrido apos vencido        \par
+                  Se comando 02/IGUAL/Solicitacao de Baixa /Pos.      \par
+                  109 a 110/, codigos admissiveis no campo primeira   \par
+                  instrucao codificada.. Seu preenchimento nao eh     \par
+                  obrigatorio.                                        \par
+                  42-Devolver                                         \par
+                  44-Baixar                                           \par
+                  46-Entregar ao sacado franco de pagamento           \par
+                  Se comando 09/IGUAL/Instrucao para Protestar        \par
+                  /Pos. 109 a 110/, codigos admissiveis no campo      \par
+                  primeira instrucao codificada/caso esteja em bran   \par
+                  co o Sistema assume 05 dias uteis apos vencido/..   \par
+                  03-Protestar no 3. dia util apos vencido            \par
+                  04-Protestar no 4. dia util apos vencido            \par
+                  05-Protestar no 5. dia util apos vencido            \par
+                  06 a 30 - Protestar no xx dia corrido apos vencido  \par
+                  35-Protestar no 35. dia corrido apos vencido        \par
+                  40-Protestar no 40. dia corrido apos vencido        \par
+                  45-Protestar no 45. dia corrido apos vencido        \par
+                  Obs... a/ Os titulos com vencimento aa vista ou na  \par
+                            apresentacao e com instrucao para         \par
+                            protesto 03, 04, 05, 10, 15, 20, 25 e 30  \par
+                            dias apos o vencimento serao efetivamen   \par
+                            te protestados com 18, 19,20,25,30,35,40  \par
+                            45 dias respectivamente apos a data do    \par
+                            seu registro.,                            \par
+                         b/ Notas de Debito, Recibos,Notas Promisso   \par
+                            rias/exclusivamente em cobranca simples/  \par
+                            titulos das carteiras 12/cobranca de      \par
+                            premios de seguro/ e 15 nao serao         \par
+                            passiveis de protesto.                    \par
+                            Portanto, nao admitem as instrucoes       \par
+                            codificadas 03, 04, 05, 10, 15, 20,25,    \par
+                            30 e 45.                                  \par
+36    161 a 173   JUROS DE MORA POR DIA/COMISSAO DE PERMANENCIA..     \par
+                  Este dado prevalecera sobre a taxa de juros         \par
+                  cadastrada para o cedente. Se nao informado e       \par
+                  houver instrucao para cobranca de juros             \par
+                  /instrucao 01/, o sistema assumirah a taxa          \par
+                  cadastrada para o cedente e, na ausencia desta, a   \par
+                  taxa normalmente praticada pelo Banco, na data da   \par
+                  liquidacao.                                         \par
+37/38 174 a 192   Quando o comando for igual "35" ou "36", preencher  \par
+                  as posi\'e7\'f5es 174 a 192 conforme abaixo:              \par
+                  Campo                  Conte\'fado                     \par
+      174 a 174   Cod Multa              1 - Valor                    \par
+                                         2 - Percentual               \par
+                                         9 - Dispensar Multa          \par
+      175 a 180   Multa                      C\'f3digo Multa "1" ou      \par
+                                             "2", informar quantidade \par
+                                             de dias para inicio da   \par
+                                             da cobran\'e7a da multa     \par
+                                             C\'f3digo Multa "9",        \par
+                                             informar zeros.          \par
+      181 a 192   Vlr-Per-Multa              C\'f3digo Multa  "1",       \par
+                                             informar valor da multa. \par
+                                             C\'f3digo Multa  "2",       \par
+                                             informar percentual.     \par
+                                             C\'f3digo Multa  "9"        \par
+                                             informar zeros.          \par
+37/38 174 a 176   Preencher as posi\'e7\'f5es 174 a  176 conforme abaixo:   \par
+                  Comando "38", informar zeros.                       \par
+                  Comando "39", informar quantidade de dias ap\'f3s o    \par
+                  vencimento para recebimento do t\'edtulo.              \par
+38    180 a 192   VALOR DO DESCONTO.. Valor do desconto a ser conce   \par
+                  dido. Para que o desconto seja concedido por dia    \par
+                  de antecipacao, informar 777777 na /data para des   \par
+                  conto/, e o valor do desconto por dia de antecipa   \par
+                  pacao.                                              \par
+                  Para BBVENDOR, as informacoes desse campo deverao   \par
+                  ser encaminhadas no seguinte layout..               \par
+      180 a 184 9(02)V999  Taxa de juros do vendedor, com dois in     \par
+                           teiros e tres decimais.                    \par
+      185 a 189 9(02)V999  Taxa de juros do comprador, com dois in    \par
+                           teiros e tres decimais.                    \par
+      190 a 190 9(01)      Indicativo de IOF Financiado.              \par
+                           1 - IOF Financiado                         \par
+                           0 - IOF nao Financiado                     \par
+      191 a 192 9(02)      Informar zeros.                            \par
+51    392 a 393   PRAZO DE PROTESTO..Caso o campo /comando/,Pos. 109  \par
+                  a 110, esteja preenchido com /01-registro de        \par
+                  titulos/ e o campo /instrucao codificada 1/,        \par
+                  Pos. 157 a 158, tenha sido preenchido com /06/,     \par
+                  obrigatorio impostar o prazo em dias corridos para  \par
+                  protesto.. de 06 a 29, 35 ou 40 dias.               \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+TRAILER                                                               \par
+....................................................................  \par
+N.  POSICOES  PICTURE USAGE     CONTEUDO                              \par
+....................................................................  \par
+01  001 a 001 9/001/  Display   9                                     \par
+02  002 a 394 X/393/  Display   Brancos                               \par
+03  395 a 400 9/006/  Display   Sequencial do ultimo registro         \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+                                                                      \par
+\pard\f1\par
+\par
+}
+ 
