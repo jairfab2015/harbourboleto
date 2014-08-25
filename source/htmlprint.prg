@@ -209,13 +209,20 @@ METHOD Print() CLASS HTMLPRINT
 
       WB:Visible    := ::lPreview
       WB:Navigate(::PrintUrl)
+      TRY
+         WHILE WB:Readystate <> READYSTATE_COMPLETE .OR. lnWaiting >= MAX_TIME
+            lnWaiting = Seconds() - lnStarted
+         ENDDO
+      CATCH
 
-      WHILE WB:Readystate <> READYSTATE_COMPLETE .OR. lnWaiting >= MAX_TIME
-         lnWaiting = Seconds() - lnStarted
-      ENDDO
+      END
 
-      WHILE WB:QueryStatusWB(OLECMDID_PRINT) != (OLECMDF_SUPPORTED + OLECMDF_ENABLED)
-      ENDDO
+      TRY
+         WHILE WB:QueryStatusWB(OLECMDID_PRINT) != (OLECMDF_SUPPORTED + OLECMDF_ENABLED)
+         ENDDO
+      CATCH
+
+      END
 
       // Imprime ou Nao
       IF ::lPrintHtml

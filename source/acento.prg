@@ -1,6 +1,12 @@
 /*
  * $Id$
 */
+
+*-----------------------------------------------*
+* Programa..: bibbol.prg (biblioteca de Boletos *
+* Objetivo..: Func AcentoHTML(), RetiraAcento() *
+*-----------------------------------------------*
+
 /*
  * Copyright 2006 Mario Simoes Filho mario@argoninformatica.com.br for original acento.prg
  * Copyright 2006 Marcelo Sturm <marcelo.sturm@gmail.com> for modifications in the original project
@@ -48,142 +54,193 @@
 
 #include "harbourboleto.ch"
 
-*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-*+
-*+    Function AcentoHTML()
-*+
-*+    Called from ( oboleto.prg  )   1 - function acentohtml()
-*+
-*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-*+
-FUNCTION AcentoHTML(cStr,lAnsi,lTudo)
+FUNCTION AcentoHTML( cStr, lAnsi, lTudo )
 
-   DEFAULT lAnsi TO .F.,lTudo TO .T.
+   DEFAULT lAnsi TO .F., lTudo TO .T.
 
-   IF __ANSI $ cStr
-      cStr  := STRTRAN(cStr,__ANSI,"")
-      lAnsi := .T.
+   IF lTudo
+      cStr := STRTRAN(cStr, "&", "&amp;")
+      cStr := STRTRAN(cStr, "<", "&lt;")
+      cStr := STRTRAN(cStr, ">", "&gt;")
    ENDIF
-
-   IF lAnsi
-      cStr := AnsiToHtml( cStr )
-   ELSE
-      cStr := OemToHtml( cStr )
-   ENDIF
-   IF !lTudo
-      cStr := STRTRAN(cStr,"&amp;","&")
-      cStr := STRTRAN(cStr,"&lt;" ,"<")
-      cStr := STRTRAN(cStr,"&gt;" ,">")
-   ENDIF
-
-RETURN cStr
-
-/* -------------------------------------------------------------------------- */
-
-/*
-FUNCTION RetiraAcento( cStr,  lAll, lAnsi )
-
-   LOCAL nI
-   LOCAL nLen := LEN(cStr)
-   LOCAL cChar
-//   LOCAL Ret := ""
-
-   DEFAULT lAll TO .T., lAnsi TO .F.
-
    IF __ANSI $ cStr
       cStr := STRTRAN(cStr, __ANSI, "")
       lAnsi := .T.
    ENDIF
 
    IF lAnsi
-      cStr := STRTRAN(cStr, "·", "a")
-      cStr := STRTRAN(cStr, "¡", "A")
-      cStr := STRTRAN(cStr, "‡", "a")
-      cStr := STRTRAN(cStr, "¿", "A")
-      cStr := STRTRAN(cStr, "È", "e")
-      cStr := STRTRAN(cStr, "…", "E")
-      cStr := STRTRAN(cStr, "Ë", "e")
-      cStr := STRTRAN(cStr, "»", "e")
-      cStr := STRTRAN(cStr, "Ì", "i")
-      cStr := STRTRAN(cStr, "Õ", "I")
-      cStr := STRTRAN(cStr, "Ï", "i")
-      cStr := STRTRAN(cStr, "Ã", "I")
-      cStr := STRTRAN(cStr, "Û", "o")
-      cStr := STRTRAN(cStr, "”", "O")
-      cStr := STRTRAN(cStr, "Ú", "o")
-      cStr := STRTRAN(cStr, "“", "O")
-      cStr := STRTRAN(cStr, "˙", "u")
-      cStr := STRTRAN(cStr, "⁄", "U")
-      cStr := STRTRAN(cStr, "˘", "u")
-      cStr := STRTRAN(cStr, "Ÿ", "U")
-      cStr := STRTRAN(cStr, "‚", "a")
-      cStr := STRTRAN(cStr, "¬", "A")
-      cStr := STRTRAN(cStr, "Í", "e")
-      cStr := STRTRAN(cStr, " ", "E")
-      cStr := STRTRAN(cStr, "Ù", "o")
-      cStr := STRTRAN(cStr, "‘", "O")
-      cStr := STRTRAN(cStr, "„", "a")
-      cStr := STRTRAN(cStr, "√", "A")
-      cStr := STRTRAN(cStr, "ı", "o")
-      cStr := STRTRAN(cStr, "’", "O")
-      cStr := STRTRAN(cStr, "Á", "c")
-      cStr := STRTRAN(cStr, "«", "C")
-      cStr := STRTRAN(cStr, "ˇ", "y")
-      cStr := STRTRAN(cStr, "ˆ", "o")
-      cStr := STRTRAN(cStr, "÷", "O")
-      cStr := STRTRAN(cStr, "Ò", "n")
-      cStr := STRTRAN(cStr, "—", "N")
-      cStr := STRTRAN(cStr, "¸", "u")
-      cStr := STRTRAN(cStr, "‹", "U")
-      cStr := STRTRAN(cStr, "∫", "o.")
-      cStr := STRTRAN(cStr, "∞", "o.")
-      cStr := STRTRAN(cStr, "™", "a.")
+      cStr := STRTRAN(cStr, "·", "&aacute;")
+      cStr := STRTRAN(cStr, "¡", "&Aacute;")
+      cStr := STRTRAN(cStr, "‡", "&agrave;")
+      cStr := STRTRAN(cStr, "¿", "&Agrave;")
+      cStr := STRTRAN(cStr, "È", "&eacute;")
+      cStr := STRTRAN(cStr, "…", "&Eacute;")
+      cStr := STRTRAN(cStr, "Ë", "&egrave;")
+      cStr := STRTRAN(cStr, "»", "&egrave;")
+      cStr := STRTRAN(cStr, "Ì", "&iacute;")
+      cStr := STRTRAN(cStr, "Õ", "&Iacute;")
+      cStr := STRTRAN(cStr, "Ï", "&igrave;")
+      cStr := STRTRAN(cStr, "Ã", "&Igrave;")
+      cStr := STRTRAN(cStr, "Û", "&oacute;")
+      cStr := STRTRAN(cStr, "”", "&Oacute;")
+      cStr := STRTRAN(cStr, "Ú", "&ograve;")
+      cStr := STRTRAN(cStr, "“", "&Ograve;")
+      cStr := STRTRAN(cStr, "˙", "&uacute;")
+      cStr := STRTRAN(cStr, "⁄", "&Uacute;")
+      cStr := STRTRAN(cStr, "˘", "&ugrave;")
+      cStr := STRTRAN(cStr, "Ÿ", "&Ugrave;")
+      cStr := STRTRAN(cStr, "‚", "&acirc;")
+      cStr := STRTRAN(cStr, "¬", "&Acirc;")
+      cStr := STRTRAN(cStr, "Í", "&ecirc;")
+      cStr := STRTRAN(cStr, " ", "&Ecirc;")
+      cStr := STRTRAN(cStr, "Ù", "&ocirc;")
+      cStr := STRTRAN(cStr, "‘", "&Ocirc;")
+      cStr := STRTRAN(cStr, "„", "&atilde;")
+      cStr := STRTRAN(cStr, "√", "&Atilde;")
+      cStr := STRTRAN(cStr, "ı", "&otilde;")
+      cStr := STRTRAN(cStr, "’", "&Otilde;")
+      cStr := STRTRAN(cStr, "Á", "&ccedil;")
+      cStr := STRTRAN(cStr, "«", "&Ccedil;")
+      cStr := STRTRAN(cStr, "ˇ", "&yuml;")
+      cStr := STRTRAN(cStr, "ˆ", "&ouml;")
+      cStr := STRTRAN(cStr, "÷", "&Ouml;")
+      cStr := STRTRAN(cStr, "Ò", "&ntilde;")
+      cStr := STRTRAN(cStr, "—", "&Ntilde;")
+      cStr := STRTRAN(cStr, "¸", "&uuml;")
+      cStr := STRTRAN(cStr, "‹", "&Uuml;")
+      cStr := STRTRAN(cStr, "∫", "&deg;")
+      cStr := STRTRAN(cStr, "∞", "&deg;")
+      cStr := STRTRAN(cStr, "™", "&ordf;")
    ELSE
-      cStr := STRTRAN(cStr, "†", "a")
-      cStr := STRTRAN(cStr, "µ", "A")
-      cStr := STRTRAN(cStr, "Ö", "a")
-      cStr := STRTRAN(cStr, "∑", "A")
-      cStr := STRTRAN(cStr, "Ç", "e")
-      cStr := STRTRAN(cStr, "ê", "E")
-      cStr := STRTRAN(cStr, "ä", "e")
-      cStr := STRTRAN(cStr, "‘", "E")
-      cStr := STRTRAN(cStr, "°", "i")
-      cStr := STRTRAN(cStr, "÷", "I")
-      cStr := STRTRAN(cStr, "ç", "i")
-      cStr := STRTRAN(cStr, "ﬁ", "I")
-      cStr := STRTRAN(cStr, "¢", "o")
-      cStr := STRTRAN(cStr, "‡", "O")
-      cStr := STRTRAN(cStr, "ï", "o")
-      cStr := STRTRAN(cStr, "„", "O")
-      cStr := STRTRAN(cStr, "£", "u")
-      cStr := STRTRAN(cStr, "È", "U")
-      cStr := STRTRAN(cStr, "ó", "u")
-      cStr := STRTRAN(cStr, "Î", "U")
-      cStr := STRTRAN(cStr, "É", "a")
-      cStr := STRTRAN(cStr, "∂", "A")
-      cStr := STRTRAN(cStr, "à", "e")
-      cStr := STRTRAN(cStr, "“", "E")
-      cStr := STRTRAN(cStr, "ì", "o")
-      cStr := STRTRAN(cStr, "‚", "O")
-      cStr := STRTRAN(cStr, "∆", "a")
-      cStr := STRTRAN(cStr, "«", "A")
-      cStr := STRTRAN(cStr, "‰", "o")
-      cStr := STRTRAN(cStr, "Â", "O")
-      cStr := STRTRAN(cStr, "á", "c")
-      cStr := STRTRAN(cStr, "Ä", "C")
-      cStr := STRTRAN(cStr, "ò", "y")
-      cStr := STRTRAN(cStr, "î", "o")
-      cStr := STRTRAN(cStr, "ô", "O")
-      cStr := STRTRAN(cStr, "§", "n")
-      cStr := STRTRAN(cStr, "•", "N")
-      cStr := STRTRAN(cStr, "Å", "u")
-      cStr := STRTRAN(cStr, "ö", "U")
-      cStr := STRTRAN(cStr, "ß", "o.")
-      cStr := STRTRAN(cStr, "¯", "o.")
-      cStr := STRTRAN(cStr, "¶", "a.")
+      cStr := STRTRAN(cStr, "†", "&aacute;")
+      cStr := STRTRAN(cStr, "µ", "&Aacute;")
+      cStr := STRTRAN(cStr, "Ö", "&agrave;")
+      cStr := STRTRAN(cStr, "∑", "&Agrave;")
+      cStr := STRTRAN(cStr, "Ç", "&eacute;")
+      cStr := STRTRAN(cStr, "ê", "&Eacute;")
+      cStr := STRTRAN(cStr, "ä", "&egrave;")
+      cStr := STRTRAN(cStr, "‘", "&Egrave;")
+      cStr := STRTRAN(cStr, "°", "&iacute;")
+      cStr := STRTRAN(cStr, "÷", "&Iacute;")
+      cStr := STRTRAN(cStr, "ç", "&igrave;")
+      cStr := STRTRAN(cStr, "ﬁ", "&Igrave;")
+      cStr := STRTRAN(cStr, "¢", "&oacute;")
+      cStr := STRTRAN(cStr, "‡", "&Oacute;")
+      cStr := STRTRAN(cStr, "ï", "&ograve;")
+      cStr := STRTRAN(cStr, "„", "&Ograve;")
+      cStr := STRTRAN(cStr, "£", "&uacute;")
+      cStr := STRTRAN(cStr, "È", "&Uacute;")
+      cStr := STRTRAN(cStr, "ó", "&ugrave;")
+      cStr := STRTRAN(cStr, "Î", "&Ugrave;")
+      cStr := STRTRAN(cStr, "É", "&acirc;")
+      cStr := STRTRAN(cStr, "∂", "&Acirc;")
+      cStr := STRTRAN(cStr, "à", "&ecirc;")
+      cStr := STRTRAN(cStr, "“", "&Ecirc;")
+      cStr := STRTRAN(cStr, "ì", "&ocirc;")
+      cStr := STRTRAN(cStr, "‚", "&Ocirc;")
+      cStr := STRTRAN(cStr, "∆", "&atilde;")
+      cStr := STRTRAN(cStr, "«", "&Atilde;")
+      cStr := STRTRAN(cStr, "‰", "&otilde;")
+      cStr := STRTRAN(cStr, "Â", "&Otilde;")
+      cStr := STRTRAN(cStr, "á", "&ccedil;")
+      cStr := STRTRAN(cStr, "Ä", "&Ccedil;")
+      cStr := STRTRAN(cStr, "ò", "&yuml;")
+      cStr := STRTRAN(cStr, "î", "&ouml;")
+      cStr := STRTRAN(cStr, "ô", "&Ouml;")
+      cStr := STRTRAN(cStr, "§", "&ntilde;")
+      cStr := STRTRAN(cStr, "•", "&Ntilde;")
+      cStr := STRTRAN(cStr, "Å", "&uuml;")
+      cStr := STRTRAN(cStr, "ö", "&Uuml;")
+      cStr := STRTRAN(cStr, "ß", "&deg;")
+      cStr := STRTRAN(cStr, "¯", "&deg;")
+      cStr := STRTRAN(cStr, "¶", "&ordf;")
    ENDIF
 
 RETURN cStr
-*/
 
-*+ EOF: ACENTO.PRG
+/* -------------------------------------------------------------------------- */
+
+FUNCTION RetiraAcento( cStr,  lAll )
+
+   LOCAL nI
+   LOCAL nLen := LEN(cStr)
+   LOCAL cChar
+   LOCAL Ret := ""
+
+   DEFAULT lAll TO .F.
+
+   IF lAll
+   #ifdef HB_STD_CH_
+      FOR EACH cChar IN cStr
+   #else
+      FOR nI := 1 TO nLen
+          cChar := SUBSTR(cStr,  nI,  1)
+   #endif
+          DO CASE //SWITCH cChar
+          CASE cChar $ "™" + CHR(166)
+              cChar := "a."
+          CASE cChar $ "∫∞ß"
+              cChar := "o."
+          CASE cChar $ "†Ö„∆‰ÑÉ"
+              cChar := "a"
+          CASE cChar $ "¡µ¿∑√¬∂"
+              cChar := "A"
+          CASE cChar $ "…ê “"
+              cChar := "E"
+          CASE cChar $ "°"
+              cChar := "i"
+          CASE cChar $ "Õ÷"
+              cChar := "I"
+          CASE cChar $ "¢ı‰ˆì"
+              cChar := "o"
+          CASE cChar $ "”’Â‘‚"
+              cChar := "O"
+          CASE cChar $ "£Å"
+              cChar := "u"
+          CASE cChar == "⁄‹ö"
+              cChar := "U"
+          END
+          Ret += cChar
+      NEXT
+   ELSE
+   #ifdef HB_STD_CH_
+      FOR EACH cChar IN cStr
+   #else
+      FOR nI := 1 TO nLen
+          cChar := SUBSTR(cStr,  nI,  1)
+   #endif
+          DO CASE //SWITCH cChar
+          CASE cChar $ "™" + CHR(166)
+              cChar := "a."
+          CASE cChar $ "∫∞ß"
+              cChar := "o."
+          CASE cChar $ "Áá"
+              cChar := "c"
+          CASE cChar $ "«Ä"
+              cChar := "C"
+          CASE cChar $ "·†‡Ö„∆‰Ñ‚É"
+              cChar := "a"
+          CASE cChar $ "¡µ¿∑√¬∂"
+              cChar := "A"
+          CASE cChar $ "ÈÇÍà"
+              cChar := "e"
+          CASE cChar $ "…ê “"
+              cChar := "E"
+          CASE cChar $ "Ì°"
+              cChar := "i"
+          CASE cChar $ "Õ÷"
+              cChar := "I"
+          CASE cChar $ "Û¢ı‰ˆÙì"
+              cChar := "o"
+          CASE cChar $ "”’Â‘‚"
+              cChar := "O"
+          CASE cChar $ "˙£¸Å"
+              cChar := "u"
+          CASE cChar == "⁄‹ö"
+              cChar := "U"
+          END
+          Ret += cChar
+      NEXT
+   ENDIF
+
+RETURN Ret

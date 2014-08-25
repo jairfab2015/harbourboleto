@@ -1,0 +1,62 @@
+CINI = 
+C_OUTPUTFOLDER = 
+DEFFILE = 
+INCLUDEFOLDERS = 
+LAUTORUN = 
+LDEBUG = .F.
+LGUI = .F.
+LIBFOLDERS = 
+LMT = .F.
+LNOAUTOFWH = .F.
+LPRG_CLASSICDEBUG = .F.
+LPRG_DEBUG = .F.
+LUSEDLL = .F.
+MAPFILE = 
+MYC_FLAGS = 
+MYDEFINES = 
+MYLINK_FLAGS = 
+MYPRG_FLAGS = 
+MYRC_FLAGS = 
+MYSLY_FLAGS = 
+OUTPUTFOLDER = obj
+PRG_OUTPUTFOLDER = 
+RC_OUTPUTFOLDER = 
+RUNARGUMENTS = 
+SLY_OUTPUTFOLDER = 
+STARTIN = 
+TARGETFOLDER = 
+
+[hboleto.prg]
+MYC_FLAGS = 
+MYDEFINES = 
+MYPRG_FLAGS = 
+
+[..\..\source\oboleto.prg]
+MYC_FLAGS = 
+MYDEFINES = 
+MYPRG_FLAGS = 
+
+[..\..\source\oRemessa.prg]
+MYC_FLAGS = 
+MYDEFINES = 
+MYPRG_FLAGS = 
+
+[..\..\source\inifiles.prg]
+MYC_FLAGS = 
+MYDEFINES = 
+MYPRG_FLAGS = 
+
+[..\..\source\htmlprint.prg]
+MYC_FLAGS = 
+MYDEFINES = 
+MYPRG_FLAGS = 
+
+[..\..\source\xhbrun.prg]
+MYC_FLAGS = 
+MYDEFINES = 
+MYPRG_FLAGS = 
+
+[..\..\source\acento.prg]
+MYC_FLAGS = 
+MYDEFINES = 
+MYPRG_FLAGS = 
