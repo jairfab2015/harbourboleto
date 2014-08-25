@@ -1,5 +1,5 @@
 /*
- * $Id: htmlprint.prg,v 1.6 2013/04/23 11:40:18 marioargon Exp $
+ * $Id$
 */
 /*
  * xHarbour Project source code:

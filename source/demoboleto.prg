@@ -1,5 +1,5 @@
 /*
- * $Id: demoboleto.prg,v 1.13 2013/04/23 11:40:18 marioargon Exp $
+ * $Id$
 */
   
 /*

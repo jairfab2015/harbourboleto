@@ -1,5 +1,5 @@
 /*
- * $Id: SAFRA.prg,v 1.1 2006/09/27 11:57:19 marioargon Exp $
+ * $Id$
 */
   
 /*

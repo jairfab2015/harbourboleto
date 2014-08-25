@@ -1,5 +1,5 @@
 /*
- * $Id: xhbrun.prg,v 1.11 2013/04/23 11:40:18 marioargon Exp $
+ * $Id$
 */
 
 #include "common.ch"

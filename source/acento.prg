@@ -1,5 +1,5 @@
 /*
- * $Id: acento.prg,v 1.14 2010/04/06 19:27:11 marioargon Exp $
+ * $Id$
 */
 /*
  * Copyright 2006 Mario Simoes Filho mario@argoninformatica.com.br for original acento.prg

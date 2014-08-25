@@ -1,5 +1,5 @@
 /*
- * $Id: hboleto.prg,v 1.3 2007/08/07 14:41:13 masturm Exp $
+ * $Id$
 */
   
 /*

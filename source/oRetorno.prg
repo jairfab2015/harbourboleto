@@ -1,5 +1,5 @@
  /*
- * $Id: oRetorno.prg,v 1.33 2013/04/23 11:40:18 marioargon Exp $
+ * $Id$
  */
  /*
  * Copyright 2006 Mario Simoes Filho mario@argoninformatica.com.br for original oRemessa.prg

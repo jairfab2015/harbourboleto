@@ -4,7 +4,7 @@
 *-----------------------------------------------*
 
 /*
- * $Id: bibbol.prg,v 1.1 2013/04/23 12:07:09 marioargon Exp $
+ * $Id$
 */
 /*
  * Copyright 2006 Mario Simoes Filho mario@argoninformatica.com.br for original acento.prg
