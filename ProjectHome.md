@@ -1,0 +1,1 @@
+Esta é uma iniciativa de criar uma biblioteca de Objetos (x)Harbour capaz de gerar Boletos / Arquivo de remessa e ler arquivos de retorno de qualquer banco
